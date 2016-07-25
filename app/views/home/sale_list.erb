@@ -1,0 +1,33 @@
+<head>
+<meta charset="utf-8">
+     <style>
+          #autoEx {
+               background: black;
+               width: 500px;
+               color: yellow;
+               border: 3px solid #99e6ff;
+            * margin auto; */
+          }
+     </style>
+</head>
+
+<body>
+<div class="outer-wrapper">
+   <%= render partial: "head"%>
+    <br><br><br><br>
+    
+    <div class="container-fluid text-center">
+      <div class="row content">
+         <% @every_post.each do |p|%>
+            <a href="/sale_read/<%=p.id%>">
+              <img src="<%= p.title %>" style="width: 600px; height:auto;" id="autoEx"></a> 
+            <% end %>
+         </div>
+    </div>    
+    
+ <br><br><br><br><br><br><br><br>
+ <div class="space50"></div>
+ <%= render partial: "down" %>
+</div>
+
+</body>
