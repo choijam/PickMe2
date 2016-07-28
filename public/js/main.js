@@ -32,7 +32,7 @@
     // SLIDER REVOLUTION
     jQuery('.tp-banner').show().revolution({
         dottedOverlay: "none",
-        delay: 16000,
+        delay: "Infinity",
         startwidth: 1170,
         startheight: 700,
         hideThumbs: 200,
@@ -110,7 +110,7 @@
     // SLIDER REVOLUTION
     jQuery('.tp-banner1').show().revolution({
         dottedOverlay: "none",
-        delay: 16000,
+        delay: "Infinity",
         startwidth: 1170,
         startheight: 550,
         hideThumbs: 200,

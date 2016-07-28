@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'home/index'
   get 'home/mypage'
-
+  get 'home/all'
   
   # 세일정보
   get 'sale_read' => 'home#sale_read'
