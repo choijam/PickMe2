@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'home/mypage'
   get 'home/all'
   
+  match ":controller(/:action(/:id))", :via=>[:post, :get]
+  
   # 세일정보
   get 'sale_read' => 'home#sale_read'
   get 'sale_list' => 'home#sale_list'

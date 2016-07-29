@@ -4,14 +4,10 @@ class HomeController < ApplicationController
   end
   
   def url_upload
-    @creatorname = params[:name]
-    @creatortitle = params[:title]
-    @creatorurl = params[:url]
-    
     new_allcreator =Allcreator.new
-    new_allcreator.name = @creatorname
-    new_allcreator.title = @creatortitle
-    new_allcreator.url = @creatorurl
+    new_allcreator.name = params[:name]
+    new_allcreator.title = params[:title]
+    new_allcreator.url = params[:url]
     new_allcreator.upload_date=params[:mydate]
     new_allcreator.save
     
@@ -72,6 +68,30 @@ class HomeController < ApplicationController
       @one_post = Sale.find(params[:post_id])
       @one_post.destroy
       redirect_to "/sale_list"
+  end
+  
+  
+  def all    #유튜버들의 전체 목록을 출력하는 페이지
+     @every_youtubecreator =Youtuberinfo.all
+  end
+  
+  def creatorlist
+  end
+  
+  def youtube_upload
+    new_youtubecreator =Youtuberinfo.new
+    new_youtubecreator.name = params[:name]
+    new_youtubecreator.content = params[:content]
+    new_youtubecreator.imagesrc = params[:imgsrc]
+    new_youtubecreator.save
+    
+    redirect_to "/home/all"
+  end
+  
+  def youtubelist  #각각의 유튜버가 가지는 영상을 출력하는 페이지
+  @every_allcreator =Allcreator.all
+   @clickyoutube= params[:youtubename]
+  
   end
   
   

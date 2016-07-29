@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160725085431) do
+ActiveRecord::Schema.define(version: 20160728080449) do
 
   create_table "allcreators", force: :cascade do |t|
     t.integer  "skintype"
@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(version: 20160725085431) do
     t.string   "content"
     t.string   "sale_title"
     t.string   "yourl"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "youtuberinfos", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
