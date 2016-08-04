@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  get 'home/mypage'
-  get 'home/all'
-  
   match ":controller(/:action(/:id))", :via=>[:post, :get]
   
   # 세일정보

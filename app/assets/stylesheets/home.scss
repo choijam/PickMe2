@@ -7,3 +7,92 @@
     font-family: JejuGothic;
     src: url("../fonts/JejuGothic.ttf") format("opentype");
 }
+
+
+
+.mydropdown {
+  position: relative;
+  width: 200px; 
+  color: #fff;
+  transform-style: preserve-3d;
+  perspective: 1500;
+  font-size: 16px;
+  
+  &.flip {
+    .front {
+      transform: rotateX(180deg);
+    }
+    
+    .back {
+      transform: rotateX(0deg);
+    }
+  }
+  
+  
+  span {
+    height: inherit;
+    margin-left: 20px;
+    line-height: 60px;
+  }
+  
+  .front,
+  .back {
+    transition: all 0.2s cubic-bezier(.11,1.61,.69,.64);
+  }
+  
+  .front {
+    height: 60px;
+    width: 200px;
+    background-color: #55acee;
+    backface-visibility: hidden;
+    cursor: pointer;
+    
+    &:after {
+      content:"";
+      position: absolute;
+      top: 28px;
+      right: 20px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #fff;
+    }
+    
+    &:hover {
+      background-color: #55acee;
+    }
+  }
+  
+  .back {
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+  }
+  
+  ul {
+    position: absolute;
+    top: -120px;
+    z-index:1;
+    width: calc(100% - 40px);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 3px 8px rgba(0,0,0,.25);
+    list-style: none;
+    
+    li {
+      color: #55acee;
+      line-height: 30px;
+      cursor: pointer;
+      
+      &:hover {
+       color: #55acee;
+      }
+    }
+  }
+  
+  &.open {
+    ul {
+      
+    }
+  }
+}

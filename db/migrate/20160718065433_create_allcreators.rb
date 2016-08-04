@@ -7,6 +7,7 @@ class CreateAllcreators < ActiveRecord::Migration
       t.string :title
       t.string :url
       t.string :upload_date
+      t.string :mystyle
       t.timestamps null: false
       
     end

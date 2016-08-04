@@ -1,0 +1,48 @@
+<body>
+<div class="outer-wrapper">
+    <%= render partial: "head" %>
+    <br><br>
+    <div class="container">
+        <h3 style="font-family: JejuGothic;">내게 맞는 뷰티크리에이터를 찾아보세요</h3><br>
+        
+        
+        <div class="row">
+            <div class="mydropdown">
+              <div class="front">  
+                <span>피부 타입</span>
+              </div>
+              <div class="back"> 
+                <ul>
+                  <a href="/home/dryskin" style="text-decoration:none"><li>건성</li></a>
+                  <li>중성</li>
+                  <li>복합성</li>
+                  <li>지성</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+                
+       <br><br><br><br><br><br><br><br><br><br><br><br> 
+	<div class="space50"></div>
+    </div>
+</div>
+    <%= render partial: "down" %>		
+</body>
+
+
+<script>
+    $(".mydropdown").on("click", function(){
+      $(this).toggleClass("flip");
+    })
+    
+    $(".back ul li").on("click", function(){
+      val = $(this).html();
+      $("span").html(val);
+    });
+</script>

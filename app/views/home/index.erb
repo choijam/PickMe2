@@ -237,84 +237,29 @@
             <h2 class="title uppercase" style="font-family: JejuGothic;">Top 뷰티크리에이터</h2>
          </div>
          <div class="row">
+           <% @every_allcreator.first(3). each.with_index do |youtube, index| %>
             <div class="col-md-4">
                <div class="hb-info text-center">
                   <div class="hb-thumb">
-                     <img src="images/blog/1.jpg" class="img-responsive" alt=""/>
+                  <!--이미지 출려하는 걸로 바꾸기-->
+                  <iframe id="ytplayer2" width="960" height="340" src="<%=youtube.url%>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen autoplay></iframe>
                      <div class="date-meta">
-                        June<span>06</span>2015
+                        <!--순위 출력-->
+                        <span><%=index+1%></span>
                      </div>
                   </div>
-                  <h4><a href="#">Climb the mountain</a></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat mi tellus, euismod viverra dolor ultrices sit amet.</p>
-                  <a href="#" class="readmore">Read more...</a>
+                  <h4><a href="#"><%=youtube.name%></a></h4>
                </div>
+            
             </div>
-            <div class="col-md-4">
-               <div class="hb-info text-center">
-                  <div class="hb-thumb">
-                     <img src="images/blog/2.jpg" class="img-responsive" alt=""/>
-                     <div class="date-meta">
-                        June<span>02</span>2015
-                     </div>
-                  </div>
-                  <h4><a href="#">Girl showing stats</a></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat mi tellus, euismod viverra dolor ultrices sit amet.</p>
-                  <a href="#" class="readmore">Read more...</a>
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="hb-info text-center">
-                  <div class="hb-thumb">
-                     <img src="images/blog/3.jpg" class="img-responsive" alt=""/>
-                     <div class="date-meta">
-                        May<span>30</span>2015
-                     </div>
-                  </div>
-                  <h4><a href="#">A photographers heart</a></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat mi tellus, euismod viverra dolor ultrices sit amet.</p>
-                  <a href="#" class="readmore">Read more...</a>
-               </div>
-            </div>
+            <% end %>
          </div>
       </div>
       
-      <div id="stats3" class="parallax-bg3">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-3 col-sm-6">
-                  <div class="stats3-info">
-                     <i class="icon-location3"></i>
-                     <p><span class="count">715</span></p>
-                     <h2>Places Visited</h2>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="stats3-info">
-                     <i class="icon-box2"></i>
-                     <p><span class="count">350</span></p>
-                     <h2>Box shadows</h2>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="stats3-info">
-                     <i class="icon-photoshop"></i>
-                     <p><span class="count">427</span></p>
-                     <h2>Vectors created</h2>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="stats3-info">
-                     <i class="icon-bookmark"></i>
-                     <p><span class="count">2540</span></p>
-                     <h2>Bookmarks</h2>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      
+
       <div class="space90"></div>
+      <br><br><br><br><br><br><br><br>
+
 
    </div>
 

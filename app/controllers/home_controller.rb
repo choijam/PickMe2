@@ -9,8 +9,8 @@ class HomeController < ApplicationController
     new_allcreator.title = params[:title]
     new_allcreator.url = params[:url]
     new_allcreator.upload_date=params[:mydate]
+    new_allcreator.mystyle=params[:mystyle]
     new_allcreator.save
-    
     redirect_to "/home/mypage"
   end
   
@@ -92,6 +92,12 @@ class HomeController < ApplicationController
   @every_allcreator =Allcreator.all
    @clickyoutube= params[:youtubename]
   
+  end
+  
+  def choice #유투브를 타입별로 분류하여 출력하는 페이지
+  end
+  
+  def dryskin
   end
   
   

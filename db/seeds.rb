@@ -13,6 +13,18 @@ new_allcreator.title = "맑은 레드 메이크업"
 new_allcreator.url = "https://www.youtube.com/embed/WxkVZxWjxKo"
 new_allcreator.save
 
+
+Allcreator.create(name: "다또아", title: "로드샵특집1, 학생 메이크업 - all drug store, No-make up makeup (Student makeup)",
+url: "https://www.youtube.com/embed/ma-8S4pRhWU")
+
+Allcreator.create(name: "곽토리", title: "인간 복숭아 메이크업 튜토리얼 Peach Girl Makeup Tutorial",
+url: "https://www.youtube.com/embed/CKE7GJhvByw")
+
+Allcreator.create(name: "개코의 오픈스튜디오", title: "(민낯주의) 입술 색소침착, 착색 커버하기",
+url: "https://www.youtube.com/embed/jr318sAnlaw")
+
+
+
 Sale.create(title: "http://img.lifestyler.co.kr/uploads/BeautyApp/Sub/20160725/20160725140224_5358178556.jpg",
 content: "http://img.lifestyler.co.kr/uploads/BeautyApp/Sub/20160725/20160725135936_4612429441.jpg",
 sale_title: "[아모레퍼시픽] 한율 베스트 제품 세일 및 키트 증정 (2016/07/25 ~ 2016/07/28)",

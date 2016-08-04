@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(version: 20160728080449) do
   end
 
   create_table "youtuberinfos", force: :cascade do |t|
+    t.string   "name"
+    t.string   "content"
+    t.string   "imagesrc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
