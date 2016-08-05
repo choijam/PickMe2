@@ -8,6 +8,7 @@ class HomeController < ApplicationController
     new_allcreator.name = params[:name]
     new_allcreator.title = params[:title]
     new_allcreator.url = params[:url]
+    new_allcreator.skintype=params[:skintype]
     new_allcreator.upload_date=params[:mydate]
     new_allcreator.mystyle=params[:mystyle]
     new_allcreator.save
@@ -89,7 +90,7 @@ class HomeController < ApplicationController
   end
   
   def youtubelist  #각각의 유튜버가 가지는 영상을 출력하는 페이지
-  @every_allcreator =Allcreator.all
+   @every_allcreator =Allcreator.all
    @clickyoutube= params[:youtubename]
   
   end
@@ -97,8 +98,20 @@ class HomeController < ApplicationController
   def choice #유투브를 타입별로 분류하여 출력하는 페이지
   end
   
-  def dryskin
+  def dryskin #건성 타입의 피부를 출력하는 페이지
+    @every_allcreator = Allcreator.where(skintype: '0')
   end
   
+  def neutralskin  #중성 타입의 피부를 출력하는 페이지
+    @every_allcreator = Allcreator.where(skintype: '1')
+  end
+  
+  def complexskin  #복합성 타입의 피부를 출력하는 페이지
+    @every_allcreator = Allcreator.where(skintype: '2')
+  end
+  
+  def oilyskin  #지성 타입의 피부를 출력하는 페이지
+    @every_allcreator = Allcreator.where(skintype: '3')
+  end
   
 end

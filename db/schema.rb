@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160728080449) do
     t.string   "title"
     t.string   "url"
     t.string   "upload_date"
+    t.string   "mystyle"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

@@ -5,7 +5,6 @@
     <div class="container">
         <h3 style="font-family: JejuGothic;">내게 맞는 뷰티크리에이터를 찾아보세요</h3><br>
         
-        
         <div class="row">
             <div class="mydropdown">
               <div class="front">  
@@ -20,21 +19,36 @@
                 </ul>
               </div>
             </div>
-        </div>
+        </div><br><br><br>
+        
+      <!--중성 뷰티 크리에이터 출력시작 -->
+      <div class="container home-blog padding80">
+         <div class="row">
+           <% @every_allcreator.each do |youtube| %>
+            <div class="col-md-4">
+               <div class="hb-info text-center">
+                  <div class="hb-thumb">
+                  <iframe id="ytplayer2" width="960" height="340" src="<%=youtube.url%>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen autoplay></iframe>
+                  </div>
+                  <h4><a href="#"><%=youtube.name%></a></h4>
+               </div>
+            </div>
+            <% end %>
+         </div>
+      </div>
+      <!--중성 뷰티 크리에이터 출력 종료 -->
         
         
         
+      
+      
         
-        
-        
-                
        <br><br><br><br><br><br><br><br><br><br><br><br> 
 	<div class="space50"></div>
     </div>
 </div>
     <%= render partial: "down" %>		
 </body>
-
 
 <script>
     $(".mydropdown").on("click", function(){
@@ -46,3 +60,6 @@
       $("span").html(val);
     });
 </script>
+
+
+
