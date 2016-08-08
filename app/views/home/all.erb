@@ -3,7 +3,23 @@
     <%= render partial: "head" %>
     <br><br>
     <div class="container">
- 
+    
+        <% @every_youtubecreator.each do |youtube| %>
+        <figure class="snip1344">
+            <img src="http://www.walls321.com/reimg/image.php?src=http://img.walls321.com/images1/y1k1ytl2kzg.jpg&h=1334&w=750"  alt="profile-sample1" class="background"/>
+            <img src="<%=youtube.imagesrc%>" alt="profile-sample1" class="profile"/>
+          <figcaption>
+            <h3><%=youtube.name%></h3>
+                <form action="/home/youtubelist/<%=youtube.id%>" method="POST">
+                <input type="hidden" value="<%=youtube.name%>" name="youtubename">
+                <button class="btn btn-default btn-xs" type="submit">영상보러가기</button>
+                <input class="btn btn-default btn-xs" type="button"  value="구독중">
+                </form>
+          </figcaption>
+        </figure>
+        <% end %>
+
+           
         
         
         
@@ -12,10 +28,12 @@
         
                 
        <br><br><br><br><br><br><br><br><br><br><br><br> 
-	<div class="space50"></div>
+        <div class="flickr_pagination" style="text-align: center;">
+          <%= will_paginate @every_youtubecreator  %>
+        </div>
+   <div class="space50"></div>
     </div>
 </div>
-    <%= render partial: "down" %>		
+          
+    <%= render partial: "down" %>   
 </body>
-
-

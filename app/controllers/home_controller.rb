@@ -73,7 +73,8 @@ class HomeController < ApplicationController
   
   
   def all    #유튜버들의 전체 목록을 출력하는 페이지
-     @every_youtubecreator =Youtuberinfo.all
+    WillPaginate.per_page= 9
+    @every_youtubecreator  =Youtuberinfo.paginate(:page => params[:page]).order('created_at desc')
   end
   
   def creatorlist
@@ -114,4 +115,8 @@ class HomeController < ApplicationController
     @every_allcreator = Allcreator.where(skintype: '3')
   end
   
+  def youtubelist #유투버 영상 보러 가기 눌렀을 때 유투버가 가진 동영상 출력하는 페이지
+   @every_allcreator =Allcreator.all
+   @clickyoutube= params[:youtubename]
+  end
 end

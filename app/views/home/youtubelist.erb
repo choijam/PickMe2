@@ -1,0 +1,31 @@
+<body>
+<div class="outer-wrapper">
+    <%= render partial: "head" %>
+    <br><br>
+    <div class="container">
+        <div id="portfolio-home" class="isotope home-project-3col">
+               <div class="project-item illustration print">
+                  <div class="project-gal">
+                     
+                      <% @every_allcreator.each do |youtube| %>
+                           <%if @clickyoutube == youtube.name%> 
+                            <iframe width="560" height="315" src="<%=youtube.url%>" frameborder="0" allowfullscreen></iframe>
+                            <% end %>
+                      <%end%>
+                     
+                  </div>
+               </div>
+            </div>
+        
+        
+        
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br> 
+   <div class="space50"></div>
+    </div>
+</div>
+           
+           
+
+    <%= render partial: "down" %>   
+</body>

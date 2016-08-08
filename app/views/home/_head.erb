@@ -41,11 +41,19 @@
 								마이페이지
 							</a>
 						</li>
-						<li class="dropdown">
-							<a style="font-family: JejuGothic;" href="/users/sign_in">
-								로그인 
-							</a>
-						</li>
+						<% if user_signed_in? %>
+                     <li class="dropdown yamm-fw">
+                        <a href="/users/sign_out">
+                           로그아웃
+                        </a>
+                     </li>
+                  <% else %>
+                     <li class="dropdown yamm-fw">
+                        <a href="/users/sign_in">
+                           로그인
+                        </a>
+                     </li>
+                  <% end %>
 					</ul>
 				</div>
 			</div>
