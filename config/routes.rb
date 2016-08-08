@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   match ":controller(/:action(/:id))", :via=>[:post, :get]
   
   # 세일정보

@@ -1,0 +1,16 @@
+<div class="panel panel-default devise-bs">
+  <div class="panel-heading" style = "width:750px; height:auto; margin-top:25px; margin-left:auto; margin-right:auto; border-radius: 10px; padding:10px">
+    <h4>Forgot your password?</h4>
+  </div>
+  <div class="panel-body" style = "background-color : white; margin-top : 50px; width:750px; height:auto; margin-left:auto; margin-right:auto; border-radius: 20px; padding:25px">
+    <form role="form" class="new_user" id="new_user" action="/users/password" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="5v2lI+JvHgvJTLVeEA+noYD1rGw6+4STGAE08tLAyuFmTSEA8B2ILdGudzGVwFm4o2jTbeXRcCeqATJtwg+wRQ==" />
+      <div class="form-group">
+        <label for="user_email">Email</label>
+        <input autofocus="autofocus" class="form-control" type="email" value="" name="user[email]" id="user_email" />
+      </div>
+      <input type="submit" name="commit" value="Send me reset password instructions" class="btn btn-primary" />
+    </form>
+    <a href="/users/sign_in">Sign in</a><br />
+    <a href="/users/sign_up">Sign up</a><br />
+  </div>
+</div>

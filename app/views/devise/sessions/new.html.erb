@@ -1,0 +1,25 @@
+<div class="panel panel-default devise-bs">
+  <div class="panel-heading" style = "width:750px; height:auto; margin-top:25px; margin-left:auto; margin-right:auto; border-radius: 10px; padding:10px">
+    <h4>Sign in</h4>
+  </div>
+  <div class="panel-body" style = "background-color : white; margin-top : 50px; width:750px; height:auto; margin-left:auto; margin-right:auto; border-radius: 20px; padding:25px">
+    <form role="form" class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="O2NgmL7Re2HkzN/jgxil82IjRkIMTBOZQ3gJM2fg5RwxJQUe/x8yO/U6oFQU26qJbdJgEUgkBQi7L9KUO4p0DQ==" />
+      <div class="form-group">
+        <label for="user_email">Email</label>
+        <input autofocus="autofocus" class="form-control" type="email" value="" name="user[email]" id="user_email" />
+      </div>
+      <div class="form-group">
+        <label for="user_password">Password</label>
+        <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password" />
+      </div>
+      <div class="checkbox">
+        <label for="user_remember_me">
+          <input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />remember me
+        </label>
+      </div>
+      <input type="submit" name="commit" value="Sign in" class="btn btn-primary" />
+    </form>    
+    <a href="/users/sign_up">Sign up</a><br />
+    <a href="/users/password/new">Forgot your password?</a><br />
+  </div>
+</div>

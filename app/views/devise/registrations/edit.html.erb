@@ -1,0 +1,144 @@
+<head>
+    <!-- Include Bootstrap Datepicker -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+    
+    <style type="text/css">
+    /**
+     * Override feedback icon position
+     * See http://formvalidation.io/examples/adjusting-feedback-icon-position/
+     */
+    #eventForm .form-control-feedback {
+        top: 0;
+        right: -15px;
+    }
+    </style>
+    <!-- Include Bootstrap Datepicker End -->
+
+</head>
+
+
+<div class="panel panel-default devise-bs">
+  <div class="panel-heading" style = "width:750px; height:auto; margin-top:25px; margin-left:auto; margin-right:auto; border-radius: 10px; padding:10px">
+    <h4>Edit User</h4>
+  </div>
+  <div class="panel-body"  style = "background-color : white; margin-top : 50px; width:750px; height:auto; margin-left:auto; margin-right:auto; border-radius: 20px; padding:25px">
+    <form class="edit_user" id="edit_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+      <input type="hidden" name="_method" value="put" />
+      <input type="hidden" name="authenticity_token" value="/SEIiek1f0vFRjjEsf6XsK6Kg34U92uswg5ZUVYdq1muYfMPZgpPCiHN4CzeforWn5cAbmo23fWwrF78KzZ9Ig==" />
+      <div class="form-group">
+        <label for="user_email">Email</label>
+        <input autofocus="autofocus" class="form-control" type="email" value="<%= current_user.email %>" name="user[email]" id="user_email" />
+      </div>
+
+      <div class="form-group">
+        <label for="user_current_password">Current password</label> <i>(we need your current password to confirm your changes)</i>
+        <input class="form-control" type="password" name="user[current_password]" id="user_current_password" />
+      </div>
+      <div class="form-group">
+        <label for="user_password">Password</label> <i>(leave blank if you don&#39;t want to change it)</i><br />
+        <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password" />
+      </div>
+      <div class="form-group">
+        <label for="user_password_confirmation">Password confirmation</label><br />
+        <input class="form-control" type="password" name="user[password_confirmation]" id="user_password_confirmation" />
+      </div>
+      
+      <div class="form-group">
+        <label for="user_name">Name</label>
+        <input autofocus="autofocus" class="form-control" type="text" value="<%= current_user.user_name %>" name="user[user_name]" id="user_name" />
+      </div>
+      
+
+      <div>
+        <label for="user_rate">Level</label><br />
+        <% if current_user.user_rate == "1" %>
+          <p>Youtuber</p>
+        <% else %>
+          <p>Viewer</p>
+        <% end %>
+      </div><br/>
+      
+      <div class="form-group">
+        <label for="user_skintype">SkinType</label>
+        <p><%= current_user.user_skintype %></p>
+        <select class="form-control" name="user[user_skintype]" id="user_skintype" autofocus="autofocus" type = "dropdown">
+          <option>건성</option>
+          <option>중성</option>
+          <option>복합성</option>
+          <option>지성</option>
+        </select>
+      </div><br/>
+      
+      <div>
+        <label for="user_gender">Gender</label>
+          <% if current_user.user_gender == true %>
+            <p>Female</p>
+          <% else %>
+            <p>Male</p>
+          <% end %>
+        <label class="radio-inline"><input type="radio" value="true" name="user[user_gender]" id="user_gender" />Female</label>
+        <label class="radio-inline"><input type="radio" value="false" name="user[user_gender]" id="user_gender" />Male</label>
+      </div><br/>
+
+      <div class="form-group">
+          <label class="form-label" for="date_of_birth">생일  </label>
+              <div class="input-group input-append date"  id="date_of_birth" >
+                  <input type="text" class="form-control"name="user[date_of_birth]" value = "<%= current_user.date_of_birth %>" />
+                  <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+      </div>
+
+      <input type="submit" name="commit" value="Update" class="btn btn-primary" />
+
+    </form>
+    <hr>
+    <p>Unhappy?<a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/users">Cancel my account</a>.</p>
+    <a href="javascript:history.back()">Back</a>
+  </div>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+      $('#date_of_birth')
+          .datepicker({
+              dateFormat: 'yyyy-mm-dd'
+          })
+          .on('changeDate', function(e) {
+              // Revalidate the date field
+              $('#eventForm').formValidation('revalidateField', 'date');
+          });
+  
+      $('#eventForm').formValidation({
+          framework: 'bootstrap',
+          icon: {
+              valid: 'glyphicon glyphicon-ok',
+              invalid: 'glyphicon glyphicon-remove',
+              validating: 'glyphicon glyphicon-refresh'
+          },
+          fields: {
+              name: {
+                  validators: {
+                      notEmpty: {
+                          message: 'The name is required'
+                      }
+                  }
+              },
+              date: {
+                  validators: {
+                      notEmpty: {
+                          message: 'The date is required'
+                      },
+                      date: {
+                          format: 'YYYY/MM/DD',
+                          message: 'The date is not a valid'
+                      }
+                  }
+              }
+          }
+      });
+  });
+</script>
