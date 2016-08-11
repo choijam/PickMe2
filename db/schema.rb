@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20160808071839) do
     t.string   "name"
     t.string   "content"
     t.string   "imagesrc"
+    t.integer  "skintype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

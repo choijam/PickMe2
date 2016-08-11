@@ -1,0 +1,61 @@
+<body>
+<div class="outer-wrapper">
+    <%= render partial: "head" %>
+    <br><br>
+    <div class="container">
+        <h3 style="font-family: JejuGothic;">테마별 메이크업 영상을 찾아보세요</h3><br>
+        
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <button data-label="과즙상">과즙상</button>
+            </div>
+        </div><br><br><br>
+        
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <button data-label="면접">과즙상</button>
+            </div>
+        </div><br><br><br>
+        
+        
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <button data-label="청순">과즙상</button>
+            </div>
+        </div><br><br><br>
+        
+        
+        
+        
+ 
+    <br><br>    
+
+       <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    
+	<div class="space50"></div>
+    </div>
+</div>
+    <%= render partial: "down" %>		
+</body>
+
+<script>
+var loading = function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  e.target.classList.add('loading');
+  e.target.setAttribute('disabled','disabled');
+  setTimeout(function(){
+    e.target.classList.remove('loading');
+    e.target.removeAttribute('disabled');
+  },1500);
+};
+
+var btns = document.querySelectorAll('button');
+for (var i=btns.length-1;i>=0;i--) {
+  btns[i].addEventListener('click',loading);
+}
+</script>
+
+
+

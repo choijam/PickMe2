@@ -73,7 +73,7 @@ class HomeController < ApplicationController
   
   
   def all    #유튜버들의 전체 목록을 출력하는 페이지
-    WillPaginate.per_page= 9
+    WillPaginate.per_page= 12
     @every_youtubecreator  =Youtuberinfo.paginate(:page => params[:page]).order('created_at desc')
   end
   
@@ -100,23 +100,31 @@ class HomeController < ApplicationController
   end
   
   def dryskin #건성 타입의 피부를 출력하는 페이지
-    @every_allcreator = Allcreator.where(skintype: '0')
+    WillPaginate.per_page= 12
+    @every_youtubecreator = Youtuberinfo.where(skintype: '0').paginate(:page => params[:page]).order('created_at desc')
   end
   
   def neutralskin  #중성 타입의 피부를 출력하는 페이지
-    @every_allcreator = Allcreator.where(skintype: '1')
+    WillPaginate.per_page= 12
+    @every_youtubecreator = Youtuberinfo.where(skintype: '1').paginate(:page => params[:page]).order('created_at desc')
   end
   
   def complexskin  #복합성 타입의 피부를 출력하는 페이지
-    @every_allcreator = Allcreator.where(skintype: '2')
+    WillPaginate.per_page= 12
+    @every_youtubecreator = Youtuberinfo.where(skintype: '2').paginate(:page => params[:page]).order('created_at desc')
   end
   
   def oilyskin  #지성 타입의 피부를 출력하는 페이지
-    @every_allcreator = Allcreator.where(skintype: '3')
+    WillPaginate.per_page= 12
+    @every_youtubecreator = Youtuberinfo.where(skintype: '3').paginate(:page => params[:page]).order('created_at desc')
   end
   
   def youtubelist #유투버 영상 보러 가기 눌렀을 때 유투버가 가진 동영상 출력하는 페이지
    @every_allcreator =Allcreator.all
    @clickyoutube= params[:youtubename]
+  end
+  
+  def theme #유투버 영상을 테마별로 출력하는 페이지
+    WillPaginate.per_page= 12
   end
 end

@@ -22,28 +22,32 @@
         </div><br><br><br>
         
       <!--중성 뷰티 크리에이터 출력시작 -->
-      <div class="container home-blog padding80">
-         <div class="row">
-           <% @every_allcreator.each do |youtube| %>
-            <div class="col-md-4">
-               <div class="hb-info text-center">
-                  <div class="hb-thumb">
-                  <iframe id="ytplayer2" width="960" height="340" src="<%=youtube.url%>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen autoplay></iframe>
-                  </div>
-                  <h4><a href="#"><%=youtube.name%></a></h4>
-               </div>
-            </div>
-            <% end %>
+        <% @every_youtubecreator.each do |youtube| %>
+        <figure class="snip1344">
+            <img src="http://www.walls321.com/reimg/image.php?src=http://img.walls321.com/images1/y1k1ytl2kzg.jpg&h=1334&w=750"  alt="profile-sample1" class="background"/>
+            <img src="<%=youtube.imagesrc%>" alt="profile-sample1" class="profile"/>
+          <figcaption>
+            <h4><%=youtube.name%></h4>
+                <form action="/home/youtubelist/<%=youtube.id%>" method="POST">
+                <input type="hidden" value="<%=youtube.name%>" name="youtubename">
+                <button class="btn btn-default btn-xs" type="submit">영상보러가기</button>
+                <input class="btn btn-default btn-xs" type="button"  value="구독중">
+                </form>
+          </figcaption>
+        </figure>
+        <% end %>
+        <!--중성 뷰티 크리에이터 출력 종료 -->
+        
+        
+    <br><br>    
+    <div class="row">
+         <div class="flickr_pagination" style="text-align: center;">
+            <%= will_paginate @every_youtubecreator  %>
          </div>
-      </div>
-      <!--중성 뷰티 크리에이터 출력 종료 -->
-        
-        
-        
-      
-      
-        
-       <br><br><br><br><br><br><br><br><br><br><br><br> 
+    </div>    
+       <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    
 	<div class="space50"></div>
     </div>
 </div>

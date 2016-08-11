@@ -4,7 +4,8 @@ class CreateYoutuberinfos < ActiveRecord::Migration
       
       t.string :name
       t.string :content
-      t.string :imagesrc
+      t.string :imagesrc 
+      t.integer :skintype
       
       t.timestamps null: false
     end
