@@ -2,10 +2,10 @@
      <style>
           #autoEx {
                background: black;
-               width: 500px;
+               width: 400px;
                color: yellow;
                border: 3px solid #99e6ff;
-            * margin auto; */
+               margin 4px;
           }
      </style>
 </head>
@@ -19,7 +19,8 @@
       <div class="row content">
          <% @every_post.each do |p|%>
             <a href="/sale_read/<%=p.id%>">
-              <img src="<%= p.title %>" style="width: 600px; height:auto;" id="autoEx"></a> 
+              <img src="<%= p.title %>" style="width: 500px; height:auto;
+              margin-right: 33px; margin-left: 33px; margin-top: 20px;" id="autoEx"></a> 
             <% end %>
          </div>
     </div>    

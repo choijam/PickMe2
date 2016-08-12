@@ -16,9 +16,6 @@ new_allcreator.url = "https://www.youtube.com/embed/WxkVZxWjxKo"
 new_allcreator.save
 
 
-Allcreator.create(name: "LeoJ Makeup", title: "로드샵특집1, 학생 메이크업 - all drug store, No-make up makeup (Student makeup)",
-skintype: "0", url: "https://www.youtube.com/embed/ma-8S4pRhWU", mystyle:"나연")
-
 Allcreator.create(name: "Daddoa 다또아", title: "로드샵특집1, 학생 메이크업 - all drug store, No-make up makeup (Student makeup)",
 skintype: "0", url: "https://www.youtube.com/embed/ma-8S4pRhWU")
 
@@ -43,7 +40,7 @@ skintype: "0", url: "https://www.youtube.com/embed/H_o3bjBeaI0")
 Allcreator.create(name: "Daddoa 다또아", title: "핑크메이크업 + 브러쉬 소개 + 꿀팁까지 ! - PINK makeup + brush",
 skintype: "0", url: "https://www.youtube.com/embed/hCo7V3YU8ro")
 
-Allcreator.create(name: "Daddoa 다또아", title: "(Giveaway) 코랄 핑크 워터프루프 메이크업 - Coral Pink Waterproof Makeup"
+Allcreator.create(name: "Daddoa 다또아", title: "(Giveaway) 코랄 핑크 워터프루프 메이크업 - Coral Pink Waterproof Makeup",
 skintype: "0", url: "https://www.youtube.com/embed/_tV-foEvMOg")
 
 Allcreator.create(name: "Bambigirl 밤비걸", title: "5만원으로 샤방한 새내기 메이크업! ( + 밤비걸의 대학생활 꿀팁까지! ) Freshman makeup",
@@ -220,7 +217,226 @@ Allcreator.create(name: "우린", title: "제주도에서 같이 준비해요! G
 skintype: "3", url: "https://www.youtube.com/embed/xCXh8z3ZXPs")
 
 
+# 연두콩 메이크업 영상
+Allcreator.create(name: "yeondukong 연두콩", title: "피치 메이크업 peach makeup",
+skintype: "0", url: "https://www.youtube.com/embed/DY5QZxToKZI", mystyle:"피치")
 
+Allcreator.create(name: "yeondukong 연두콩", title: "낮 스킨케어, 밤 스킨케어 루틴 Skin care Routine",
+skintype: "0", url: "https://www.youtube.com/embed/_h09OZNac_I", mystyle:"스킨케어 루틴")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "시험기간 9시 수업 대충 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/XPAPp48YS5g", mystyle:"9시 수업 메이크업")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "셀카 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/Ke2tYJ68etI", mystyle:"셀기꾼이 되는 법")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "형광등 켜지는 레드오렌지 립 BEST 4",
+skintype: "0", url: "https://www.youtube.com/embed/TP3lx2990uk", mystyle:"레드오렌지 립")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "요청이 가장많았던 학생 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/ulIDzEFdWYM", mystyle:"학생")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "데일리 메이크업 같이 준비해요 Get ready with me Daily makeup",
+skintype: "0", url: "https://www.youtube.com/embed/mzIwEPT-dDw", mystyle:"데일리 메이크업 준비")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "데오드란트 종류와 사용법 (ft.니베아)",
+skintype: "0", url: "https://www.youtube.com/embed/vBy47L1upaU", mystyle:"데오드란트")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "클렌징 루틴 : 같이 클렌징 해요 Daily Facial Cleansing Routine for dry skin",
+skintype: "0", url: "https://www.youtube.com/embed/9bzL0xhDiNg", mystyle:"클렌징 루틴")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "(Eng) 그윽한 브라운 데일리 메이크업 (Brown Daily Makeup)",
+skintype: "0", url: "https://www.youtube.com/embed/JZKPoairxd4", mystyle:"브라운 데일리 메이크업")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "요새하는 광나는 피부표현/ 베이스메이크업 / 파데꿀조합",
+skintype: "0", url: "https://www.youtube.com/embed/kMAG7PcZGrI", mystyle:"베이스 메이크업")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "오 나의 귀신님 박보영 메이크업 /오나귀 박보영 메이크업 (Oh My Ghostess Park Bo-young Makeup)",
+skintype: "0", url: "https://www.youtube.com/embed/vuSZGs8Kr6M", mystyle:"박보영")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "(ENG) 퀵! 바캉스 메이크업 Quick Vacance Makeup",
+skintype: "0", url: "https://www.youtube.com/embed/QIqfyObxJrI", mystyle:"바캉스")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "(ENG) Daily Eye Makeup (하울메이크업)",
+skintype: "0", url: "https://www.youtube.com/embed/0h7l-QNNCA0", mystyle:"하울")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "(ENG) 회식프루프 메이크업 (지속력 메이크업)",
+skintype: "0", url: "https://www.youtube.com/embed/J5tgIHW2scY", mystyle:"회식")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "벚꽃놀이 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/5_ZAib8sZHE", mystyle:"벚꽃놀이")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "(뷰티밋츠X연두콩) 면접 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/eBDtLuUPEFQ", mystyle:"면접")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "사과볼 메이크업 (부제 : 불타는 고구마 )",
+skintype: "0", url: "https://www.youtube.com/embed/7x8iDCsGMR0", mystyle:"사과 볼")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "같이 준비해요! 설 명절메이크업 (피곤함주의 ㅠㅠ)
+",
+skintype: "0", url: "https://www.youtube.com/embed/9QPyf99Q-4M", mystyle:"설")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "윈터 스킨케어루틴 (Winter skin care routine)",
+skintype: "0", url: "https://www.youtube.com/embed/16BYfc3pY08", mystyle:"겨울 스킨케어")
+
+Allcreator.create(name: "yeondukong 연두콩", title: "가을단풍 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/tww6bOfipTE", mystyle:"가을")
+
+
+# 씬님 메이크업 영상
+
+Allcreator.create(name: "ssin 씬님", title: "BTS 'FIRE' V inspired makeup tut 방탄소년단 뷔 메이크업",
+skintype: "1", url: "https://www.youtube.com/embed/nrCb5wSFSkc
+", mystyle:"BTS 뷔")
+
+Allcreator.create(name: "ssin 씬님", title: "Kylie Jenner make up 카일리제너 메이크업",
+skintype: "1", url: "https://www.youtube.com/embed/E-YT1L9hnho
+", mystyle:"카일리제너")
+
+
+Allcreator.create(name: "ssin 씬님", title: "발그레 메이크업 Tipsy, flushed peach Makeup",
+skintype: "1", url: "https://www.youtube.com/embed/D4Rvn9PoLD0
+", mystyle:"발그레")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(4) 스트로빙 메이크업 #2016 TREND MAKEUP SKILLS",
+skintype: "1", url: "https://www.youtube.com/embed/EANTHi_RfiA
+", mystyle:"스트로빙")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(3) 스틱 컨투어링 메이크업 #2016 TREND MAKEUP SKILLS",
+skintype: "1", url: "https://www.youtube.com/embed/I35y6dod3Lk
+", mystyle:"스틱 컨투어링")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(2) 베이킹 메이크업 #2016 TREND MAKEUP SKILLS",
+skintype: "1", url: "https://www.youtube.com/embed/mGIVIM7VTM8
+", mystyle:"베이킹")
+
+
+Allcreator.create(name: "ssin 씬님", title: "Color Correct tutorial 컬러 코렉팅 메이크업",
+skintype: "1", url: "https://www.youtube.com/embed/Cp1HCP99Z6k
+", mystyle:"컬러 코렉팅")
+
+
+Allcreator.create(name: "ssin 씬님", title: "Rainbow Jisook makeup tutorial and go to meet her! 레인보우 지숙 메이크업하고 지숙이 만나러가기",
+skintype: "1", url: "https://www.youtube.com/embed/h2xg-8sI4e8
+", mystyle:"레인보우 지숙")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 화폐 메이크업 Korean money makeup",
+skintype: "1", url: "https://www.youtube.com/embed/LgQ2m9GFzyk
+", mystyle:"화폐")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 마마무 음오아예 문별 메이크업 여자.ver",
+skintype: "1", url: "https://www.youtube.com/embed/1dEmBA5flqU", mystyle:"마마무 문별")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 태티서 'Dear Santa' 태연 메이크업",
+skintype: "1", url: "https://www.youtube.com/embed/H63d7ROjtvM", mystyle:"태연")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 중국 판빙빙st 메이크업 inspired by QiuQiu (仇仇给了我这个化妆教程的灵感)",
+skintype: "1", url: "https://www.youtube.com/embed/zulh0QDVNE0
+", mystyle:"판빙빙")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 성덕 : 여자친구 유주 메이크업 GFriend Yuju inspired makeup",
+skintype: "1", url: "https://www.youtube.com/embed/q8iSSGNS4UY", mystyle:"여자친구 유주")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 가을 스모키 메이크업 Autumn Smokey Makeup",
+skintype: "1", url: "https://www.youtube.com/embed/RO8imTdAWZY", mystyle:"가을 스모키")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 2NE1 씨엘 메이크업 CL inspired makeup tut",
+skintype: "1", url: "https://www.youtube.com/embed/EbOqqSCjoGI
+", mystyle:"2NE1 씨엘")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 소녀시대 파티 써니 메이크업 SNSD Party SUNNY Inspired makeup",
+skintype: "1", url: "https://www.youtube.com/embed/TZrwzlE-e8g", mystyle:"써니")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 씨스타 보라 썸머 메이크업 Sistar Bora Summer Makeup",
+skintype: "1", url: "https://www.youtube.com/embed/VlWIVjMhve4", mystyle:"씨스타 보라")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 할리퀸 메이크업 Harley Quinn inspired makeup",
+skintype: "1", url: "https://www.youtube.com/embed/F54ucqueHxY", mystyle:"할리퀸")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 5월의 여씬 메이크업 Spring Makeup tutorial",
+skintype: "1", url: "https://www.youtube.com/embed/Xt3I-G41-Qs", mystyle:"봄")
+
+
+Allcreator.create(name: "ssin 씬님", title: "(ENG) 앨리스 메이크업 Alice in wonderland Makeup tutorial",
+skintype: "1", url: "https://www.youtube.com/embed/6IUtTTj3vzo", mystyle:"앨리스")
+
+
+# LeoJ 메이크업 영상
+Allcreator.create(name: "LeoJ Makeup", title: "충격! 남자 ★씨엘★ 도플갱어 등장! 남자가 하는 헬로 비치스 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/FAcw3Jf7x88", mystyle:"씨엘")
+
+Allcreator.create(name: "LeoJ Makeup", title: "핫한 대세 훈남들의 ★남자눈썹★ 그리는법 필수 노하우 공개!",
+skintype: "0", url: "https://www.youtube.com/embed/MFxZflpfjQM", mystyle:"남자눈썹")
+
+Allcreator.create(name: "LeoJ Makeup", title: "그녀는 예뻤다 똘기자,★최시원★ 환골탈태 남자 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/tcByZ3WUV6w", mystyle:"최시원")
+
+Allcreator.create(name: "LeoJ Makeup", title: "붐샤칼라카~★빅뱅 탑★ 판타스틱 베이비 탑 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/L6zwohW3VqQ", mystyle:"빅뱅 탑")
+
+Allcreator.create(name: "LeoJ Makeup", title: "3단 피부변신! ★클렌징,리프팅,보습★ 완벽 스킨케어",
+skintype: "0", url: "https://www.youtube.com/embed/5GIgueY-MIk", mystyle:"남자 스킨케어")
+
+Allcreator.create(name: "LeoJ Makeup", title: "브라운아이드걸스 웜홀 ★가인★ 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/7Y0cRwtuWcA", mystyle:"가인")
+
+Allcreator.create(name: "LeoJ Makeup", title: "태양의후예 송중기 메이크업 (유시진 메이크업)",
+skintype: "0", url: "https://www.youtube.com/embed/ktKPfff-gt0", mystyle:"송중기")
+
+Allcreator.create(name: "LeoJ Makeup", title: "관리하기 귀찮은 남자들을 위한 ★스킨케어★",
+skintype: "0", url: "https://www.youtube.com/embed/WTaLk-8LW_8", mystyle:"남자 스킨케어")
+
+Allcreator.create(name: "LeoJ Makeup", title: "[레오제이] ★고퀄 주의★ EXID L.I.E 하니 엘라이 메이크업", 
+skintype: "0", url: "https://www.youtube.com/embed/vaRjKSS7LEw", mystyle:"하니")
+
+Allcreator.create(name: "LeoJ Makeup", title: "트와이스 나연 Cheer up 소녀소녀 메이크업",  skintype: "0", url: "https://www.youtube.com/embed/utEnGhTJcZc", mystyle:"나연")
+
+Allcreator.create(name: "LeoJ Makeup", title: "오늘만큼은 우주최강존잘! ★화보 메이크업★", 
+skintype: "0", url: "https://www.youtube.com/embed/DvUdyqbJPpM", mystyle:"화보")
+
+Allcreator.create(name: "LeoJ Makeup", title: "엑소 몬스터의 섹시한 상처 메이크업 EXO MONSTER makeup",  
+skintype: "0",  url: "https://www.youtube.com/embed/MfC3NaEVaWY", mystyle:"엑소 몬스터")
+
+Allcreator.create(name: "LeoJ Makeup", title: "명품 원브랜드 메이크업 ★바비브라운★",
+skintype: "0", url: "https://www.youtube.com/embed/lPT0tSJE9CU", mystyle:"바비브라운")
+
+Allcreator.create(name: "LeoJ Makeup", title: "LIVE 2회 볼륨감 빵빵 니키미나즈 메이크업",
+skintype: "0", url: "https://www.youtube.com/embed/Hd_0VTrpZWY", mystyle:"니키미나즈")
+
+Allcreator.create(name: "LeoJ Makeup", title: "명품 원브랜드 메이크업 ★메이크업포에버★",
+skintype: "0", url: "https://www.youtube.com/embed/sxorxNIOSLI", mystyle:"메이크업포에버")
+
+Allcreator.create(name: "LeoJ Makeup", title: "썬크림까지 한번에?! 귀찮은 남자들의 한방 올인원 케어 추천!",
+skintype: "0", url: "https://www.youtube.com/embed/xPyFarEetEk", mystyle:"남자 올인원케어")
+
+Allcreator.create(name: "LeoJ Makeup", title: "명품 원브랜드 메이크업 3탄! ★베네피트★",
+skintype: "0", url: "https://www.youtube.com/embed/wwUIM-Yd7ZM", mystyle:"베네피트")
+
+Allcreator.create(name: "LeoJ Makeup", title: "★메이크업 SOS★ 첫 고민 접수! 동그란눈 편 [뷰링 콜라보레이션]",
+skintype: "0", url: "https://www.youtube.com/embed/WrwjAJmOTqo", mystyle:"동그란 눈")
+
+Allcreator.create(name: "LeoJ Makeup", title: "LeoJ LIVE 1회 청순과 섹시의 공존 이가리 숙취메이크업!",
+skintype: "0", url: "https://www.youtube.com/embed/CVpd30_Gqac", mystyle:"이가리")
+
+Allcreator.create(name: "LeoJ Makeup", title: "레오가 요즘 애정하는 세상 간편하고 확실한 ★브러쉬 세척법★",
+skintype: "0", url: "https://www.youtube.com/embed/r2EPUWzrUMI", mystyle:"브러쉬 세척법")
+
+Allcreator.create(name: "LeoJ Makeup", title: "남자들이 좋아하는 썸타는❤︎ 봄 메이크업! 봄미 봄미 봄미업!!",
+skintype: "0", url: "https://www.youtube.com/embed/7hoLGsM1i18", mystyle:"봄 메이크업")
 
 
 Sale.create(title: "http://img.lifestyler.co.kr/uploads/BeautyApp/Sub/20160725/20160725140224_5358178556.jpg",
