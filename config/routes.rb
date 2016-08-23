@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   match ":controller(/:action(/:id))", :via=>[:post, :get]
   
+  root 'home#index'
+
+
   # 세일정보
   get 'sale_read' => 'home#sale_read'
   get 'sale_list' => 'home#sale_list'
@@ -16,12 +19,26 @@ Rails.application.routes.draw do
   #세일정보 관리자 페이지
   get '/home/sale_read_developer' => 'home#sale_read_developer'
   get '/sale_read_developer/:post_id' => 'home#sale_read_developer'
-  
-  
-  
-  
   post 'url_upload' => 'home#url_upload'
-  root 'home#index'
+  
+  
+    # 도전 뷰티크리에이터
+  get '/home/challenge_read' => 'home#challenge_read'
+  get '/challenge_list' => 'home#challenge_list'
+  post '/challenge_write' => 'home#challenge_write'
+  get '/challenge_write_view' => 'home#challenge_write_view'
+  get 'challenge_destroy/:post_id' => "home#challenge_destroy"
+  get '/challenge_read/:post_id' => 'home#challenge_read'
+  post 'challenge_update/:post_id' => "home#challenge_update"
+  get 'challenge_update_view/:post_id' => "home#challenge_update_view"
+  post '/home/reply_write' => "home#reply_write"
+
+  #도전뷰크 개인 페이지
+  get '/home/challenge_read_developer' => 'home#challenge_read_developer'
+  get '/challenge_read_developer/:post_id' => 'home#challenge_read_developer'
+  
+  #upload
+  post 'upload' => "home#upload"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

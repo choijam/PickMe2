@@ -78,18 +78,17 @@ button.loading {
 <div class="outer-wrapper">
     <%= render partial: "head" %>
     <br><br>
+    
     <div class="container">
-        <h3 style="font-family: JejuGothic;">테마별 메이크업 영상을 찾아보세요</h3><br>
-        
         <div class="row">
             <div class="col-md-2 col-md-offset-5 ">
-                <button data-label="과즙상">과즙상</button>
+                <button data-label="<%=@style_name%>"><%=@style_name%></button>
             </div>
         </div><br><br><br>
         
-        <!--과즙상 출력-->
+        <!--테마 출력-->
         <div class="row">
-            <% @juice.first(5).each do |youtube| %>
+            <% @more.each do |youtube| %>
                     <div class="col-md-4">
                        <div class="hb-info text-center">
                           <div class="hb-thumb">
@@ -99,77 +98,10 @@ button.loading {
                        </div>
                     </div>
             <% end %>
-            
-           
-            <form action="/home/viewmore" method="POST"> 
-               <input type="hidden" name="theme_style" value="과즙상">
-               <input type="submit" value="더보기">
-           </form>
-        </div><br><br>
-        <!--과즙상 출력 끝-->
-        
-        
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <button data-label="워터프루프">워터프루프</button>
-            </div>
-        </div><br><br><br>
-        
-        <!--워터프루프 출력-->
-        <div class="row">
-            <% @waterproof.first(5).each do |youtube| %>
-                    <div class="col-md-4">
-                       <div class="hb-info text-center">
-                          <div class="hb-thumb">
-                          <iframe width="560" height="315" src="<%=youtube.url%>" frameborder="0" allowfullscreen></iframe>
-                          <h5><%=youtube.title%></h5>
-                          </div>
-                       </div>
-                    </div>
-            <% end %>
-           
-           <form action="/home/viewmore" method="POST"> 
-               <input type="hidden" name="theme_style" value="워터프루프">
-               <input type="submit" value="더보기">
-           </form>
-        </div><br><br>
-        <!--워터프루프 출력 끝-->
-        
-        
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <button data-label="데일리">데일리</button>
-            </div>
-        </div><br><br><br>
-        
-        <!--데일리 출력-->
-        <div class="row">
-            <% @daily.first(5).each do |youtube| %>
-                    <div class="col-md-4">
-                       <div class="hb-info text-center">
-                          <div class="hb-thumb">
-                          <iframe width="560" height="315" src="<%=youtube.url%>" frameborder="0" allowfullscreen></iframe>
-                          <h5><%=youtube.title%></h5>
-                          </div>
-                       </div>
-                    </div>
-            <% end %>
-            
-            <form action="/home/viewmore" method="POST"> 
-               <input type="hidden" name="theme_style" value="데일리">
-               <input type="submit" value="더보기">
-           </form>
         </div>
-        <!--데일리 출력 끝-->
-        
-        
-        
- 
-    <br><br>    
+        <!--테마 출력 끝-->
 
-       <br><br><br><br><br><br><br><br><br><br><br><br>
-
-    
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 	<div class="space50"></div>
     </div>
 </div>

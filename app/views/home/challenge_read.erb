@@ -1,0 +1,92 @@
+<body>
+<div class="outer-wrapper">
+   <%= render partial: "head"%>
+   <br><br><br><br>
+   <div class="container">
+   
+      <div class="post-media" style="text-align:center;">
+                  <% unless @challenge.pic.nil? %>
+                  <video src="<%= @challenge.pic %>" width="800" height="375" controls>
+                  <% end %>
+      </div><br><br>
+                     
+         <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+               <div class="blog-single">
+                  <article class="blogpost">
+                     <h2 class="post-title"><%= @challenge.title %></h2>
+
+                     <!-- Media Gallery -->
+
+                     <div class="space5"></div>
+                     <blockquote class="style1">
+                     <small><b>Author Name</b></small>
+                        <p><%= @challenge.introduce %></p>
+                        <h3>사용한 제품</h3>
+                        <p><%= @challenge.content %></p>
+                     </blockquote>
+                                 <div class="panel-group" id="accordion-e1">
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-e1" href="#collapseOne">
+                           댓글
+                           <span class="fa fa-chevron-down"></span>
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                           <div class="row">
+                        <h4 class="uppercase space5">댓글 쓰기</h4>
+               <form method="post" action="#" id="form" role="form" class="form">
+                  <div class="row">
+                     
+                  <div class="space20">
+                     <textarea name="text" id="text" class="input-md form-control" rows="2" placeholder="댓글을 입력해 주세요" maxlength="400"></textarea>
+                  </div>
+                  <button type="submit" class="button btn-small">
+                  게시
+                  </button>
+               </form>
+                              <h5><ul class="comment-list">
+                     <li>
+                        <a class="pull-left" href="#"><img class="comment-avatar" src="images/quote/1.jpg" alt="" height="50" width="50"></a>
+                        <div class="comment-meta">
+                        
+                           <span>
+                           <em>Feb 17, 2015, at 11:34</em>
+                           
+                           </span>
+                        </div>
+                        <p>
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor sit amet urna nec tempor. Nullam pellentesque in orci in luctus. Sed convallis tempor tellus a faucibus. Suspendisse et quam eu velit commodo tempus.
+                        </p>
+                     </li>
+            
+                     <li>
+                        <a class="pull-left" href="#"><img class="comment-avatar" src="images/quote/1.jpg" alt="" height="50" width="50"></a>
+                        <div class="comment-meta">
+                        
+                           <span>
+                           <em>June 11, 2015, at 07:34</em>
+                        
+                           </span>
+                        </div>
+                        <p>
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor sit amet urna nec tempor. Nullam pellentesque in orci in luctus. Sed convallis tempor tellus a faucibus. Suspendisse et quam eu velit commodo tempus.
+                        </p>
+                        
+                     </li>
+                  </ul></h5>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+      </div></div></div></div></div>
+   
+   </div>
+   </div>
+    <div class="space50"></div>
+ <%= render partial: "down" %>                  
+</body>

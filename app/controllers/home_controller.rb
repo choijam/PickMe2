@@ -12,11 +12,13 @@ class HomeController < ApplicationController
     new_allcreator.upload_date=params[:mydate]
     new_allcreator.mystyle=params[:mystyle]
     new_allcreator.save
-    redirect_to "/home/mypage"
   end
   
   def mypage
     @every_allcreator = Allcreator.all
+    @every_youtubecreator  =Youtuberinfo.all
+    @clickyoutube= params[:youtubename]
+    @youtube_count = Allcreator.where(:name => '@clickyoutube').count
   end
   
   def sale_list
@@ -125,6 +127,93 @@ class HomeController < ApplicationController
   end
   
   def theme #유투버 영상을 테마별로 출력하는 페이지
-    WillPaginate.per_page= 12
+    @juice = Allcreator.where(mystyle: '과즙상')
+    @waterproof=Allcreator.where(mystyle: '워터프루프')
+    @daily=Allcreator.where(mystyle: '데일리')
+  end
+  
+  def viewmore #유투버 테마 영상 더보기 페이지
+    @style_name=params[:theme_style]
+    @more=Allcreator.where(mystyle: @style_name)
+    
+  end
+
+
+ #도전 뷰티크리에이터
+  def challenge_list
+    @every_challenge = Challenge.all.order("id desc")
+  end
+  
+  def challenge_write
+    @title = params[:title]
+    @content = params[:content]
+    @introduce = params[:introduce]
+    @pic = params[:pic]
+    
+    post = Challenge.new(title: params[:title], content: params[:content], writer: params[:writer], introduce: params[:introduce], pic: params[:pic])
+    if post.save
+    
+    redirect_to "/challenge_read/#{post.id}"
+  else
+    remder :text => post.errors.messages
+    end
+  end
+  
+  def challenge_read
+    @challenges = Challenge.all
+    @challenge = Challenge.find(params[:post_id])
+  end
+                
+  def sale_read_developer
+    @posts = Sale.all
+    @post = Sale.find(params[:post_id])
+    @one_post = Sale.find(params[:post_id])
+    @one_post.title = params[:title]
+    @one_post.content = params[:content]
+    @one_post.yourl = params[:yourl]
+  end
+
+  def challenge_write_view
+  end
+
+  def challenge_update_view
+      @one_challenge = Challenge.find(params[:challenge_id])
+  end
+  
+  def challenge_update
+      @one_challenge = Challenge.find(params[:challenge_id])
+      @one_challenge.title = params[:title]
+      @one_challenge.content = params[:content]
+      @one_challenge.introduce = params[:introduce]
+      @one_challenge.pic = params[:pic]
+      @one_challenge.save 
+  end  
+  
+
+  def challenge_destroy 
+      @one_challenge = Challenge.find(params[:challenge_id])
+      @one_challenge.destroy
+      redirect_to "/challenge_list"
+  end
+  
+  def upload
+    @title = params[:title]
+    @content = params[:content]
+    @introduce = params[:introduce]
+    @pic = params[:pic]
+
+    uploader = DispatchUploader.new
+    uploader.store!(params[:pic])
+    
+    post = Challenge.new(title: params[:title], content: params[:content], writer: params[:writer], introduce: params[:introduce], pic: params[:pic])
+    post.pic = uploader.url
+
+    if post.save
+    
+      redirect_to "/challenge_read/#{post.id}"
+    else
+      render :text => post.errors.messages
+    end
   end
 end
+

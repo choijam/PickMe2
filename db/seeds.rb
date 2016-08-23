@@ -23,7 +23,7 @@ Allcreator.create(name: "Daddoa 다또아", title: "다또아 생일파티 메�
 skintype: "0", url: "https://www.youtube.com/embed/a-oc3rqT5z0")
 
 Allcreator.create(name: "Daddoa 다또아", title: "기초부터 올로드샵! 데일리 메이크업 같이 준비해요 - Get Ready With Me",
-skintype: "0", url: "https://www.youtube.com/embed/gGMQmC7Y4bg")
+skintype: "0", url: "https://www.youtube.com/embed/gGMQmC7Y4bg", mystyle: "데일리")
 
 Allcreator.create(name: "Daddoa 다또아", title: "스킨케어부터 패션까지! 연말 파티 메이크업 같이준비해요! - Get Ready With Me",
 skintype: "0", url: "https://www.youtube.com/embed/-hUwl7Mj_gQ")
@@ -41,7 +41,7 @@ Allcreator.create(name: "Daddoa 다또아", title: "핑크메이크업 + 브러�
 skintype: "0", url: "https://www.youtube.com/embed/hCo7V3YU8ro")
 
 Allcreator.create(name: "Daddoa 다또아", title: "(Giveaway) 코랄 핑크 워터프루프 메이크업 - Coral Pink Waterproof Makeup",
-skintype: "0", url: "https://www.youtube.com/embed/_tV-foEvMOg")
+skintype: "0", url: "https://www.youtube.com/embed/_tV-foEvMOg", mystyle: "워터프루프")
 
 Allcreator.create(name: "Bambigirl 밤비걸", title: "5만원으로 샤방한 새내기 메이크업! ( + 밤비걸의 대학생활 꿀팁까지! ) Freshman makeup",
 skintype: "0", url: "https://www.youtube.com/embed/ma-8S4pRhWU")
@@ -63,10 +63,11 @@ Allcreator.create(name: "개코의 오픈스튜디오", title: "(민낯주의) �
 skintype: "2", url: "https://www.youtube.com/embed/jr318sAnlaw")
 
 Allcreator.create(name: "Hanbyul 한별", title: "요즘 하는 요청 메이크업 같이 해요! 데일리 핑크골드 메이크업💖",
-skintype: "3", url: "https://www.youtube.com/embed/sC8gLNoNE9k")
+skintype: "3", url: "https://www.youtube.com/embed/sC8gLNoNE9k", mystyle: "데일리")
 
 Allcreator.create(name: "Ood 오드", title: "더우니까 간단하게 메이크업",
 skintype: "3", url: "https://www.youtube.com/embed/pg-8zUCD86U")
+
 
 # 밤비걸 메이크업 영상
 Allcreator.create(name: "Bambigirl 밤비걸", title: "파운데이션 15종 직접 써보고 비교 & 추천 (feat. 건성피부 + 노란피부) Best foundation",
@@ -134,17 +135,17 @@ skintype: "0", url: "https://www.youtube.com/embed/CZ9qlm2Jr2Q")
 Allcreator.create(name: "Risabae 이사배", title: "원더걸스 선미 메이크업 WonderGirls Sunmi Why so lonely makeup l 이사배(Risabaeart)",
 skintype: "0", url: "https://www.youtube.com/embed/WYNt6Ybpa8s")
 Allcreator.create(name: "Risabae 이사배", title: "보호본능을 자극하는... 청순 데일리 메이크업!! l 이사배(Risabaeart)",
-skintype: "0", url: "https://www.youtube.com/embed/7xnfmsg_zfo")
+skintype: "0", url: "https://www.youtube.com/embed/7xnfmsg_zfo", mystyle: "데일리")
 Allcreator.create(name: "Risabae 이사배", title: "이성경 여왕의꽃 메이크업(데일리메이크업st) - Queen's Flower lee sung kyoung daily make up st l 이사배(Risabaeart)",
-skintype: "0", url: "https://www.youtube.com/embed/Kb5M4kFMm-o")
+skintype: "0", url: "https://www.youtube.com/embed/Kb5M4kFMm-o", mystyle: "데일리")
 Allcreator.create(name: "Risabae 이사배", title: "기다렸다! 사배의 저렴이 브러쉬 특집! l 이사배(Risabaeart)",
 skintype: "0", url: "https://www.youtube.com/embed/txTik4DU4Mk")
 Allcreator.create(name: "Risabae 이사배", title: "에스닉 데일리메이크업 Ethnic Silver brown daily makeupl 이사배(Risabaeart)",
-skintype: "0", url: "https://www.youtube.com/embed/Rb05Wpi7Ikk")
+skintype: "0", url: "https://www.youtube.com/embed/Rb05Wpi7Ikk", mystyle: "데일리")
 Allcreator.create(name: "Risabae 이사배", title: "여름! 물놀이 메이크업! Water Proof make up l 이사배(Risabaeart)",
 skintype: "0", url: "https://www.youtube.com/embed/DiVFCOw9tTE")
 Allcreator.create(name: "Risabae 이사배", title: "과즙상 데일리 메이크업 l 이사배(Risabaeart)",
-skintype: "0", url: "https://www.youtube.com/embed/Hr64eDGt5hA")
+skintype: "0", url: "https://www.youtube.com/embed/Hr64eDGt5hA", mystyle: "과즙상")
 Allcreator.create(name: "Risabae 이사배", title: "아이린 메이크업 Be Natural~ l 이사배(Risabaeart)",
 skintype: "0", url: "https://www.youtube.com/embed/RW9GGHY_SMQ")
 Allcreator.create(name: "Risabae 이사배", title: "I.O.I 정채연 메이크업 Jeong Chaeyeon make up! l 이사배(Risabaeart)",
@@ -152,9 +153,9 @@ skintype: "0", url: "https://www.youtube.com/embed/ON2RIwPiGDo")
 Allcreator.create(name: "Risabae 이사배", title: "사진빨 잘받는 메이크업! l 이사배(Risabaeart)",
 skintype: "0", url: "https://www.youtube.com/embed/VidaeMh8Tnk")
 Allcreator.create(name: "Risabae 이사배", title: "바쁘다 바뻐! 10분! 퀵 데일리 메이크업!l 이사배(Risabaeart)",
-skintype: "0", url: "https://www.youtube.com/embed/iJXtxT1iUXI")
+skintype: "0", url: "https://www.youtube.com/embed/iJXtxT1iUXI", mystyle: "데일리")
 Allcreator.create(name: "Risabae 이사배", title: "루비우! 데일리 메이크업~ l 이사배(Risabaeart)",
-skintype: "0", url: "https://www.youtube.com/embed/nkXbngAQy-c")
+skintype: "0", url: "https://www.youtube.com/embed/nkXbngAQy-c", mystyle: "데일리")
 Allcreator.create(name: "Risabae 이사배", title: "기다렸다! 사배의 저렴이 브러쉬 특집! l 이사배(Risabaeart)",
 skintype: "0", url: "https://www.youtube.com/embed/txTik4DU4Mk")
 Allcreator.create(name: "Risabae 이사배", title: "저렴이 음영섀도우 10개 추천! l 이사배(Risabaeart)",
@@ -166,9 +167,9 @@ skintype: "0", url: "https://www.youtube.com/embed/w--FzxCiZ3o")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "요청🌸 그때 그 인스타그램 메이크업! 예뻐보이는 '베이비코랄 데일리메이크업' (+킴닥스의 애용템들 추천!)",
 skintype: "0", url: "https://www.youtube.com/embed/Wk-R4ZBiVkI")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "킴닥스표 과즙상메이크업 시리즈 시작!🍑 1탄 '올로드샵 복숭아상 메이크업' (Peach crush)",
-skintype: "0", url: "https://www.youtube.com/embed/MkCwEaW11hA")
+skintype: "0", url: "https://www.youtube.com/embed/MkCwEaW11hA",mystyle: "과즙상")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "킴닥스표 과즙상시리즈 2탄! '웜톤 다모여라!' 올로드샵 보송보송 '살구상 메이크업'ㅣ#킴닥스시리즈",
-skintype: "0", url: "https://www.youtube.com/embed/hKM1lO4Z99M")
+skintype: "0", url: "https://www.youtube.com/embed/hKM1lO4Z99M",mystyle: "과즙상")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "돌아온 커버메이크업!! '함부로 애틋하게' 수지(Suzy) 올로드샵 쌩얼/학생 메이크업 (아리따움 추천템)ㅣ#칼라커버북",
 skintype: "0", url: "https://www.youtube.com/embed/Ji7xk2IJ1Ak")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "[닥터스 시리즈] 2탄! '박신혜(유혜정)' 이목구비 또렷해보이는 세련된 청순 메이크업!ㅣ#킴닥스칼라커버북",
@@ -178,17 +179,17 @@ skintype: "0", url: "https://www.youtube.com/embed/K8NA8SGIYBA")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "[닥터스 시리즈] 시작!! 1탄 '이성경(진서우)' 올로드샵 학생 메이크업!ㅣ#킴닥스칼라커버북",
 skintype: "0", url: "https://www.youtube.com/embed/qG_z6pD0DjA")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "킴닥스표 과즙상시리즈 3탄! 시원달콤 신박한 '수박상' 메이크업! (지속력 높은 올로드샵 여름철 바캉스 메이크업)ㅣ#킴닥스뷰티레시피",
-skintype: "0", url: "https://www.youtube.com/embed/vtYkWCpIJw4")
+skintype: "0",url: "https://www.youtube.com/embed/vtYkWCpIJw4",mystyle: "과즙상")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "fx 크리스탈 메이크업, 에뛰드 베리딜리셔스로 만들어본 산딸기 메이크업♡ (봄메이크업/개강메이",
 skintype: "0", url: "https://www.youtube.com/embed/98_6t-URMVI")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "#태양의후예 송혜교(Song hye kyo), 남심저격 쌩얼 메이크업!_안보면 손해ㅣ#킴닥스커버메이크업",
 skintype: "0", url: "https://www.youtube.com/embed/s6xoj7ocU9w")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "설리(Sul Ri) 데일리 물광 복숭아 메이크업/통통한 립, 데이트 피치메이크업ㅣby.KIMDAX",
-skintype: "0", url: "https://www.youtube.com/embed/WgRjNz1rPFI")
+skintype: "0", url: "https://www.youtube.com/embed/WgRjNz1rPFI", mystyle: "데일리")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "#올로드샵, 제품 단 7개로 레드벨벳 조이 데일리 음영메이크업!(#Redvelvet JOY 우결 dailymakeup)",
-skintype: "0", url: "https://www.youtube.com/embed/EbboHyCUhio")
+skintype: "0", url: "https://www.youtube.com/embed/EbboHyCUhio", mystyle: "데일리")
 Allcreator.create(name: "킴닥스 KIMDAX", title: "#올로드샵 화장품 9개로, 고급진 수지 한복 화보 메이크업!(단아한 데일리 코랄 메이크업)_#SUZY Covermakeup/#도리화가",
-skintype: "0", url: "https://www.youtube.com/embed/yaIsUceudQk")
+skintype: "0", url: "https://www.youtube.com/embed/yaIsUceudQk", mystyle: "데일리")
 
 # 우린 메이크업 영상
 Allcreator.create(name: "우린", title: "초가을 음영 메이크업 Early fall makeup | WOORIN",
@@ -237,7 +238,7 @@ Allcreator.create(name: "yeondukong 연두콩", title: "요청이 가장많았�
 skintype: "0", url: "https://www.youtube.com/embed/ulIDzEFdWYM", mystyle:"학생")
 
 Allcreator.create(name: "yeondukong 연두콩", title: "데일리 메이크업 같이 준비해요 Get ready with me Daily makeup",
-skintype: "0", url: "https://www.youtube.com/embed/mzIwEPT-dDw", mystyle:"데일리 메이크업 준비")
+skintype: "0", url: "https://www.youtube.com/embed/mzIwEPT-dDw", mystyle:"데일리")
 
 Allcreator.create(name: "yeondukong 연두콩", title: "데오드란트 종류와 사용법 (ft.니베아)",
 skintype: "0", url: "https://www.youtube.com/embed/vBy47L1upaU", mystyle:"데오드란트")
@@ -246,7 +247,7 @@ Allcreator.create(name: "yeondukong 연두콩", title: "클렌징 루틴 : 같�
 skintype: "0", url: "https://www.youtube.com/embed/9bzL0xhDiNg", mystyle:"클렌징 루틴")
 
 Allcreator.create(name: "yeondukong 연두콩", title: "(Eng) 그윽한 브라운 데일리 메이크업 (Brown Daily Makeup)",
-skintype: "0", url: "https://www.youtube.com/embed/JZKPoairxd4", mystyle:"브라운 데일리 메이크업")
+skintype: "0", url: "https://www.youtube.com/embed/JZKPoairxd4", mystyle:"데일리")
 
 Allcreator.create(name: "yeondukong 연두콩", title: "요새하는 광나는 피부표현/ 베이스메이크업 / 파데꿀조합",
 skintype: "0", url: "https://www.youtube.com/embed/kMAG7PcZGrI", mystyle:"베이스 메이크업")
@@ -439,6 +440,42 @@ Allcreator.create(name: "LeoJ Makeup", title: "남자들이 좋아하는 썸타�
 skintype: "0", url: "https://www.youtube.com/embed/7hoLGsM1i18", mystyle:"봄 메이크업")
 
 
+#레나 메이크업 동영상
+Allcreator.create(name: "Lena's Pocket Beauty", title: "물놀이 완벽방어! 워터프루프 메이크업 (feat.물총축제) / Water proof Make-up",
+skintype: "2", url: "https://www.youtube.com/embed/JJncoEoWjaQ", mystyle: "워터프루프")
+
+Allcreator.create(name: "Lena's Pocket Beauty", title: "다크한 분위기가 땡기는 날! 퍼플 음영 메이크업 같이 준비해요 ! / Get ready with me",
+skintype: "2", url: "https://www.youtube.com/embed/sccBa-8-H1I", mystyle: "음영")
+
+Allcreator.create(name: "Lena's Pocket Beauty", title: "레나의 인생템 립스틱 top 5! 너무 예쁜 립스틱들 소개해요 :D",
+skintype: "2", url: "https://www.youtube.com/embed/FVIBjRTN1kg", mystyle: "립스틱")
+
+Allcreator.create(name: "Lena's Pocket Beauty", title: "상큼 터지는 자몽 메이크업! [Grapefruit Make-up]",
+skintype: "2", url: "https://www.youtube.com/embed/jQCYJ4Oxujk", mystyle: "자몽")
+
+Allcreator.create(name: "Lena's Pocket Beauty", title: "봄웜톤 메이크업! 청순청순한 봄 데일리 메이크업♡ [Warm spring make-up]",
+skintype: "2", url: "https://www.youtube.com/embed/A_g9himwmDQ", mystyle: "봄")
+
+Allcreator.create(name: "Lena's Pocket Beauty", title: "5분 퀵 메이크업 도전!! 주어진 시간은 5분!",
+skintype: "2", url: "https://www.youtube.com/embed/t1yzkoNUV_A", mystyle: "퀵 메이크업")
+
+Allcreator.create(name: "Lena's Pocket Beauty", title: "요청 많았던 캐주얼한 느낌의 데일리 메이크업! / Casual daily makeup",
+skintype: "2", url: "https://www.youtube.com/embed/Ryfr6v0QirY", mystyle: "캐주얼")
+
+Allcreator.create(name: "Lena's Pocket Beauty", title: "강아지상 메이크업! 순해보이는 강아지상 얼굴이 되고싶어요..! #레나의 포켓뷰티",
+skintype: "2", url: "https://www.youtube.com/embed/A64gSdxWQnk", mystyle: "강아지상")
+
+Allcreator.create(name: "Lena's Pocket Beauty", title: "[포켓뷰티] 레나의 포켓뷰티 - 코랄 핑크 메이크업편(Coral Pink Make-up/Daily)",
+skintype: "2", url: "https://www.youtube.com/embed/AXpxN_kGsIA", mystyle: "코랄핑크")
+
+Allcreator.create(name: "Lena's Pocket Beauty", title: "[포켓뷰티] 레나의 포켓뷰티 - 새내기 메이크업편(Freshman Makeup)",
+skintype: "2", url: "https://www.youtube.com/embed/Dt_sw_SqABo", mystyle: "새내기")
+
+
+
+
+
+
 Sale.create(title: "http://img.lifestyler.co.kr/uploads/BeautyApp/Sub/20160725/20160725140224_5358178556.jpg",
 content: "http://img.lifestyler.co.kr/uploads/BeautyApp/Sub/20160725/20160725135936_4612429441.jpg",
 sale_title: "[아모레퍼시픽] 한율 베스트 제품 세일 및 키트 증정 (2016/07/25 ~ 2016/07/28)",
@@ -475,4 +512,6 @@ Youtuberinfo.create(name: 'Minjeong Park', imagesrc: 'https://yt3.ggpht.com/-_LA
 Youtuberinfo.create(name: 'Kyung Sun', imagesrc: 'https://yt3.ggpht.com/-fl2hw_KSJdk/AAAAAAAAAAI/AAAAAAAAAAA/tekViA3Aoa0/s100-c-k-no-rj-c0xffffff/photo.jpg')
 Youtuberinfo.create(name: 'Bambigirl 밤비걸', imagesrc: 'https://yt3.ggpht.com/-ZXjPxQUrtFw/AAAAAAAAAAI/AAAAAAAAAAA/8S_vuTvH9iQ/s100-c-k-no-rj-c0xffffff/photo.jpg')
 Youtuberinfo.create(name: 'PONY Makeup', imagesrc: 'https://yt3.ggpht.com/-FI0u1v-lTJo/AAAAAAAAAAI/AAAAAAAAAAA/msi0wk3w3BQ/s100-c-k-no-rj-c0xffffff/photo.jpg')
+Youtuberinfo.create(name: "Lena's Pocket Beauty", imagesrc: 'https://yt3.ggpht.com/-tn8q51WF4S8/AAAAAAAAAAI/AAAAAAAAAAA/5GiNQaaOggU/s100-c-k-no-mo-rj-c0xffffff/photo.jpg')
+
 #youtuberinfo 시드 종료 (유투버의 정보를 나타내는)

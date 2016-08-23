@@ -1,0 +1,134 @@
+<style>
+button {
+	position:relative;
+	border:0;
+	margin:0;
+	padding:0;
+	font-size:2rem;
+	font-weight:bold;
+	color:rgba(0,0,0,0);
+	background:transparent;
+	border-radius:.25rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+
+button,
+button:after,
+button:before {
+	padding:.6875rem 2rem;
+	-webkit-transition:-webkit-transform 0.75s,background-color .125s;
+	-moz-transition:-moz-transform 0.75s,background-color .125s;
+	-ms-transition:-ms-transform 0.75s,background-color .125s;
+	transition:transform 0.75s,background-color .125s;
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+}
+
+button:after,
+button:before {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	border-radius:.25rem;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	backface-visibility:hidden;
+
+}
+
+button:before {
+	z-index:2;
+	color:#fff;
+	background-color:#3e87ec;
+	content:attr(data-label);
+}
+
+button:after {
+	z-index:1;
+	background-color:#999;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-image:url(data:image/gif;base64,R0lGODlhEAAQAPIAAJmZmf///7CwsOPj4////9fX18rKysPDwyH+GkNyZWF0ZWQgd2l0aCBhamF4bG9hZC5pbmZvACH5BAAKAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQACgABACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkEAAoAAgAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkEAAoAAwAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkEAAoABAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQACgAFACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQACgAGACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAAKAAcALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==);
+	-webkit-transform:rotateX(180deg);
+	-moz-transform:rotateX(180deg);
+	-ms-transform:rotateX(180deg);
+	transform:rotateX(180deg);
+	content:'';
+}
+
+button:active:before {
+	background-color:#3571c8;
+}
+
+button.loading {
+	-webkit-transform:rotateX(180deg);
+	-moz-transform:rotateX(180deg);
+	-ms-transform:rotateX(180deg);
+	transform:rotateX(180deg);
+}
+</style>
+
+<body>
+<div class="outer-wrapper">
+   <%= render partial: "head"%>
+   <br><br>
+      <div class="container">
+         <div class="content">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                <a href="/challenge_write_view/"> <button data-label="동영상업로드">동영상업로드</button></a>
+                </div>
+            </div><br><br>
+            
+            
+            
+            <!--조회수 가장 높은 동영상 출력 -->
+            <div class="col-md-9 blog-content">
+                 <% @every_challenge.first(1).each do |p|%>
+               <article class="blogpost">
+                  <h2 class="post-title"><%= p.title %></a></h2>
+               
+                  <div class="space30"></div>
+                  <div class="post-media">
+                  <% unless p.pic.nil? %>
+                  <video src="<%= p.pic %>" width="800" height="380" controls>
+                     <% end %>
+                     </div>
+                  <div class="space20"></div>
+                  
+                  <a href="/challenge_read/<%=p.id%>" style="background-color: #3e87ec; margin-left: 730px;" class="button btn-xs" style="float:right;">더보기<i class="fa fa-angle-right"></i></a>
+               </article>
+               <div class="blog-sep"></div>
+                <% end %>
+            </div>
+            <!--조회수 가장 높은 동영상 출력 끝-->
+            
+            
+      <!--나머지 동영상 출력-->
+        <div class="row">
+            <% @every_challenge.each do |p| %>
+                    <div class="col-md-3" style="margin-right: 35px; margin-left: 35px;">
+                       <div class="hb-info text-center" >
+                          <div class="post-media" >
+                          <% unless p.pic.nil? %>
+                          <video  src="<%= p.pic %>" width="300" height="270" controls>
+                          <% end %>
+                          </div>
+                          <a href="/challenge_read/<%=p.id%>" style="background-color: #3e87ec; margin-left: 270px;" class="button btn-xs" style="float:right;"><i class="fa fa-angle-right"></i></a>
+                       </div>
+                    </div>
+            <% end %>
+        </div>
+        <!--나머지 동영상 출력 끝-->
+      
+      </div>
+   </div>
+    <div class="space50"></div>
+ <%= render partial: "down" %>
+   </body>
