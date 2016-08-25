@@ -3,45 +3,45 @@
     <%= render partial: "head" %>
     <br><br>
     <div class="container">
-        <div class="static">
-        
-        <% @every_youtubecreator.each do |youtube| %>
-        
-            <% if youtube.name == "PONY Makeup"%>
-            <img src="<%=youtube.imagesrc%>" alt="profile-sample1" class="profile"/>
-            <% end %>
+        <% @every_user.each do |iamyoutuber|%>
+            <div class="static">
             
-        <% end %> 
-            <h1>PONY Makeup</h1>
-            <h4>동영상 개수 <%=@youtube_count%></h4>
-            <h5>구독자 수</h5>
-            <form action="/home/url_upload" method="POST">
-            <button class="btn btn-default" type="submit">동영상 업로드 하기</button>
-            </form>
-        </div>
-       
-        <div class="container home-blog padding80">
-             <H2>동영상 목록</H2>
-                 <div class="row">
-                   <% @every_allcreator.each do |youtube| %>
-                    <%if  youtube.name == "PONY Makeup"%>
-                    <div class="col-md-4">
-                       <div class="hb-info text-center">
-                          <div class="hb-thumb">
-                          <iframe width="560" height="315" src="<%=youtube.url%>" frameborder="0" allowfullscreen></iframe>
-                          <h5><%=youtube.title%></h5>
-                          </div>
-                       </div>
-                    </div>
-                    <% end %>
-                    <% end %>
-                 </div>
-         </div>
+            <% @every_youtubecreator.each do |youtube| %>
+                <img src="<%=youtube.imagesrc%>" alt="profile-sample1" class="profile"/>
+                <h1><%=youtube.name %></h1>
+            <% end %>
+                
+                    <h4>동영상 개수 <%=@youtube_count%></h4>
+                
+                    <h5>구독자 수</h5>
+                    <form action="/home/url_upload" method="POST">
+                    <button class="btn btn-default" type="submit">동영상 업로드 하기</button>
+                    </form>
+            </div>
            
+            <div class="container home-blog padding80">
+                 <H2>동영상 목록</H2>
+                     <div class="row">
+                       <% @test.each do |youtube| %>
+                        <%if  youtube.name == current_user.user_name %>
+                        <div class="col-md-4">
+                           <div class="hb-info text-center">
+                              <div class="hb-thumb">
+                              <iframe width="560" height="315" src="<%=youtube.url%>" frameborder="0" allowfullscreen></iframe>
+                              <h5><%=youtube.title%></h5>
+                              </div>
+                           </div>
+                        </div>
+                        <% end %>
+                        <% end %>
+                     </div>
+             </div>
+        <% end %>
         
         
-        
-        
+         <div class="flickr_pagination" style="text-align: center;">
+            <%= will_paginate @test %>
+         </div>
          <div class="space50"></div>
     </div>
 </div>

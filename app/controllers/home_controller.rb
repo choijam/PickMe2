@@ -15,10 +15,12 @@ class HomeController < ApplicationController
   end
   
   def mypage
-    @every_allcreator = Allcreator.all
-    @every_youtubecreator  =Youtuberinfo.all
-    @clickyoutube= params[:youtubename]
-    @youtube_count = Allcreator.where(:name => '@clickyoutube').count
+    WillPaginate.per_page= 12
+    @test = Allcreator.where(:name=>current_user.user_name).paginate(:page => params[:page]).order('created_at desc')
+    @youtube_count = Allcreator.where(:name => current_user.user_name).count
+    @every_user =User.all.where(user_rate: '1')
+    @every_youtubecreator  =Youtuberinfo.where(:name=>current_user.user_name)
+
   end
   
   def sale_list
@@ -93,9 +95,8 @@ class HomeController < ApplicationController
   end
   
   def youtubelist  #각각의 유튜버가 가지는 영상을 출력하는 페이지
-   @every_allcreator =Allcreator.all
    @clickyoutube= params[:youtubename]
-  
+   @every_allcreator =Allcreator.where(name: @clickyoutube)
   end
   
   def choice #유투브를 타입별로 분류하여 출력하는 페이지
@@ -121,11 +122,6 @@ class HomeController < ApplicationController
     @every_youtubecreator = Youtuberinfo.where(skintype: '3').paginate(:page => params[:page]).order('created_at desc')
   end
   
-  def youtubelist #유투버 영상 보러 가기 눌렀을 때 유투버가 가진 동영상 출력하는 페이지
-   @every_allcreator =Allcreator.all
-   @clickyoutube= params[:youtubename]
-  end
-  
   def theme #유투버 영상을 테마별로 출력하는 페이지
     @juice = Allcreator.where(mystyle: '과즙상')
     @waterproof=Allcreator.where(mystyle: '워터프루프')
@@ -135,12 +131,9 @@ class HomeController < ApplicationController
   def viewmore #유투버 테마 영상 더보기 페이지
     @style_name=params[:theme_style]
     @more=Allcreator.where(mystyle: @style_name)
-    
   end
-
-
- #도전 뷰티크리에이터
-  def challenge_list
+           
+  def challenge_list #도전 뷰티크리에이터
     @every_challenge = Challenge.all.order("id desc")
   end
   

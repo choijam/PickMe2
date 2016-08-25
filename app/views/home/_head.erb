@@ -36,11 +36,19 @@
 							<a style="font-family: JejuGothic;" href="/sale_list">세일정보</a>
 						</li>
 						
+						
+						<% unless user_signed_in? %>
 						<li class="dropdown yamm-fw">
+							<a style="font-family: JejuGothic;" href="/users/sign_in">
+                           마이페이지
+                        </a>
+						<% else %>
 							<a style="font-family: JejuGothic;" href="/home/mypage">
 								마이페이지
 							</a>
+						<%end%>
 						</li>
+						
 						<% if user_signed_in? %>
                      <li class="dropdown yamm-fw">
                         <a style="font-family: JejuGothic;" href="/users/sign_out">

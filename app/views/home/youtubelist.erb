@@ -3,11 +3,9 @@
     <%= render partial: "head" %>
     <br><br>
     <div class="container">
-  
          <div class="container home-blog padding80">
                  <div class="row">
                    <% @every_allcreator.each do |youtube| %>
-                    <%if @clickyoutube == youtube.name%>
                     <div class="col-md-4">
                        <div class="hb-info text-center">
                           <div class="hb-thumb">
@@ -17,15 +15,12 @@
                        </div>
                     </div>
                     <% end %>
-                    <% end %>
                  </div>
-         </div>
+         </div>ra
         <br><br><br><br><br><br><br><br><br><br><br><br> 
    <div class="space50"></div>
     </div>
 </div>
-           
-           
 
     <%= render partial: "down" %>   
 </body>
