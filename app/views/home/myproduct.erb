@@ -1,5 +1,5 @@
 <style>
-button, .viewmore {
+button {
 	position:relative;
 	border:0;
 	margin:0;
@@ -15,9 +15,8 @@ button, .viewmore {
 
 button,
 button:after,
-button:before,
-.viewmore{
-	padding:.6870rem 2rem;
+button:before {
+	padding:.6875rem 2rem;
 	-webkit-transition:-webkit-transform 0.75s,background-color .125s;
 	-moz-transition:-moz-transform 0.75s,background-color .125s;
 	-ms-transition:-ms-transform 0.75s,background-color .125s;
@@ -29,8 +28,7 @@ button:before,
 }
 
 button:after,
-button:before,
-.viewmore {
+button:before {
 	position:absolute;
 	top:0;
 	bottom:0;
@@ -44,16 +42,14 @@ button:before,
 
 }
 
-button:before,
-.viewmore {
+button:before {
 	z-index:2;
 	color:#fff;
 	background-color:#3e87ec;
 	content:attr(data-label);
 }
 
-button:after,
-.viewmore {
+button:after {
 	z-index:1;
 	background-color:#999;
 	background-repeat:no-repeat;
@@ -66,13 +62,11 @@ button:after,
 	content:'';
 }
 
-button:active:before,
-.viewmore {
+button:active:before {
 	background-color:#3571c8;
 }
 
-button.loading,
-.viewmore {
+button.loading {
 	-webkit-transform:rotateX(180deg);
 	-moz-transform:rotateX(180deg);
 	-ms-transform:rotateX(180deg);
@@ -87,22 +81,32 @@ button.loading,
     <div class="container">
          <div class="container home-blog padding80">
                  <div class="row">
-                   <% @every_allcreator.each do |youtube| %>
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                        <div class="hb-info text-center">
                           <div class="hb-thumb">
-                          <iframe width="560" height="315" src="<%=youtube.url%>" frameborder="0" allowfullscreen></iframe>
-                          <h5><%=youtube.title%></h5>
-                          <form action="/home/myproduct" method="POST">
-                          <input type="hidden" name="myurl" value="<%=youtube.url%>">
-                          <input type="hidden" name="mytitle" value="<%=youtube.title%>">
-                          <input type="hidden" name="myproduct" value="<%=youtube.product_list%>">
-                          <button type="submit" data-label="사용한 제품" style="font-size: 14px;">사용한 제품</button><br><br>
-                          </form>
+                          <iframe width="580" height="315" src="<%=@url%>" frameborder="0" allowfullscreen></iframe>
+                          <h5><%=@title%></h5><br><br>
+                          <h3>사용 제품 목록</h3>
+                          <div class="row">
+                          <textarea name="cosmetic" rows="1" id="content" style=" width:200px; height :30px; " readonly="readonly"><%=@product1%></textarea>
+                          <button type="submit" class="reply_submit" style="margin-left : 30px; font-size : 15px; margin-top:0px;" data-label="최저가">최저가</button>
+                          </div>
                           </div>
                        </div>
                     </div>
-                    <% end %>
+                    
+                    <div class="col-md-3">
+                    </div>
+                    
+                    <div class="col-md-4">
+                    <div class="row">
+                    <button data-label="네이버 쇼핑 최저가">네이버 쇼핑 최저가</button>
+                    </div><br><br>
+                    
+                    <% @list.last(1).each do |x|%>
+                    <%=x.cosmetic%>
+                    <%end%>
+                    </div>
                  </div>
          </div>
         <br><br><br><br><br><br><br><br><br><br><br><br> 
@@ -112,3 +116,19 @@ button.loading,
 
     <%= render partial: "down" %>   
 </body>
+
+<script>
+$(".reply_submit").click(function(){
+
+   post_content = $("#content").val();
+ 
+    $.ajax({
+    method: "POST",
+    url: "/home/myproduct_api",
+    data: { cosmetic : post_content }
+    })
+    .done(function() {
+    alert("네이버 쇼핑으로 연결합니다.");
+    });
+});
+</script>

@@ -1,5 +1,5 @@
 <style>
-button {
+button, .viewmore {
 	position:relative;
 	border:0;
 	margin:0;
@@ -15,7 +15,8 @@ button {
 
 button,
 button:after,
-button:before {
+button:before,
+.viewmore{
 	padding:.6875rem 2rem;
 	-webkit-transition:-webkit-transform 0.75s,background-color .125s;
 	-moz-transition:-moz-transform 0.75s,background-color .125s;
@@ -28,7 +29,8 @@ button:before {
 }
 
 button:after,
-button:before {
+button:before,
+.viewmore {
 	position:absolute;
 	top:0;
 	bottom:0;
@@ -42,14 +44,16 @@ button:before {
 
 }
 
-button:before {
+button:before,
+.viewmore {
 	z-index:2;
 	color:#fff;
 	background-color:#3e87ec;
 	content:attr(data-label);
 }
 
-button:after {
+button:after,
+.viewmore {
 	z-index:1;
 	background-color:#999;
 	background-repeat:no-repeat;
@@ -62,11 +66,13 @@ button:after {
 	content:'';
 }
 
-button:active:before {
+button:active:before,
+.viewmore {
 	background-color:#3571c8;
 }
 
-button.loading {
+button.loading,
+.viewmore {
 	-webkit-transform:rotateX(180deg);
 	-moz-transform:rotateX(180deg);
 	-ms-transform:rotateX(180deg);
@@ -103,7 +109,7 @@ button.loading {
            
             <form action="/home/viewmore" method="POST"> 
                <input type="hidden" name="theme_style" value="과즙상">
-               <input type="submit" value="더보기">
+               <button type="submit" style="margin-left: 50px; margin-top: 115px" data-label=">">></button>
            </form>
         </div><br><br>
         <!--과즙상 출력 끝-->
@@ -130,7 +136,7 @@ button.loading {
            
            <form action="/home/viewmore" method="POST"> 
                <input type="hidden" name="theme_style" value="워터프루프">
-               <input type="submit" value="더보기">
+               <button type="submit" style="margin-left: 50px; margin-top: 115px" data-label=">">></button>
            </form>
         </div><br><br>
         <!--워터프루프 출력 끝-->
@@ -157,7 +163,7 @@ button.loading {
             
             <form action="/home/viewmore" method="POST"> 
                <input type="hidden" name="theme_style" value="데일리">
-               <input type="submit" value="더보기">
+               <button type="submit" style="margin-left: 50px; margin-top: 115px" data-label=">">></button>
            </form>
         </div>
         <!--데일리 출력 끝-->

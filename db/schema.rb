@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818072947) do
+ActiveRecord::Schema.define(version: 20160827132603) do
 
   create_table "allcreators", force: :cascade do |t|
     t.integer  "skintype"
@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(version: 20160818072947) do
     t.string   "url"
     t.string   "upload_date"
     t.string   "mystyle"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "product_list"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "challenges", force: :cascade do |t|
@@ -39,6 +40,12 @@ ActiveRecord::Schema.define(version: 20160818072947) do
     t.string   "content"
     t.string   "sale_title"
     t.string   "yourl"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shoppings", force: :cascade do |t|
+    t.string   "cosmetic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

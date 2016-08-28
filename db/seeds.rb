@@ -101,7 +101,8 @@ skintype: "0", url: "https://www.youtube.com/embed/ztPRGgfiCmo")
 
 # 포니 메이크업 영상
 Allcreator.create(name: "PONY Makeup", title: "Apricot Make Up🍑 (With subs) 살구 메이크업",
-skintype: "1", url: "https://www.youtube.com/embed/AvK3g2Va-2c")
+skintype: "1", url: "https://www.youtube.com/embed/AvK3g2Va-2c",
+product_list: "닉스 컬러 코렉팅 컨실러, 맥 스튜디오 워터웨이트, 굿 스킨 랩스 Z-포어 인스턴트 포어 리파이너, 스킨푸드 웨지 퍼프")
 Allcreator.create(name: "PONY Makeup", title: "Natural Make up (With subs) 내추럴 메이크업",
 skintype: "1", url: "https://www.youtube.com/embed/tRUGnDVnI60")
 Allcreator.create(name: "PONY Makeup", title: "Soft Feminine Make up (With subs) 페미닌 음영 메이크업",

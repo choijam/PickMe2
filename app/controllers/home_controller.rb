@@ -208,5 +208,22 @@ class HomeController < ApplicationController
       render :text => post.errors.messages
     end
   end
+  
+  def myproduct
+    @url=params[:myurl]
+    @title=params[:mytitle]
+    @product1=params[:myproduct].to_s.split(',')[0]
+    @product2=params[:myproduct].to_s.split(',')[1]
+    @product3=params[:myproduct].to_s.split(',')[2]
+    @product4=params[:myproduct].to_s.split(',')[3]
+    @list=Shopping.all
+  end
+  
+  def myproduct_api
+    list = Shopping.new
+    list.cosmetic = params[:cosmetic]
+    list.save
+    redirect_to '/home/myproduct'
+  end
 end
 
