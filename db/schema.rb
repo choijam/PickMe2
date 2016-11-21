@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160827132603) do
+ActiveRecord::Schema.define(version: 20160829121500) do
 
   create_table "allcreators", force: :cascade do |t|
     t.integer  "skintype"
@@ -31,8 +31,16 @@ ActiveRecord::Schema.define(version: 20160827132603) do
     t.string   "writer"
     t.string   "introduce"
     t.string   "pic",        default: ""
+    t.integer  "ip_address", default: 0
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+  end
+
+  create_table "replies", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "challenge_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "sales", force: :cascade do |t|
@@ -48,6 +56,13 @@ ActiveRecord::Schema.define(version: 20160827132603) do
     t.string   "cosmetic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "subscribes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "youtuberinfo_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -77,6 +92,12 @@ ActiveRecord::Schema.define(version: 20160827132603) do
   add_index "users", ["user_name"], name: "index_users_on_user_name", unique: true
   add_index "users", ["user_rate"], name: "index_users_on_user_rate"
   add_index "users", ["user_skintype"], name: "index_users_on_user_skintype", unique: true
+
+  create_table "viewcounts", force: :cascade do |t|
+    t.string   "ip_address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "youtuberinfos", force: :cascade do |t|
     t.string   "name"

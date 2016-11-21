@@ -81,32 +81,32 @@ button.loading {
     <div class="container">
          <div class="container home-blog padding80">
                  <div class="row">
-                    <div class="col-md-5">
                        <div class="hb-info text-center">
                           <div class="hb-thumb">
-                          <iframe width="580" height="315" src="<%=@url%>" frameborder="0" allowfullscreen></iframe>
-                          <h5><%=@title%></h5><br><br>
-                          <h3>사용 제품 목록</h3>
-                          <div class="row">
-                          <textarea name="cosmetic" rows="1" id="content" style=" width:200px; height :30px; " readonly="readonly"><%=@product1%></textarea>
-                          <button type="submit" class="reply_submit" style="margin-left : 30px; font-size : 15px; margin-top:0px;" data-label="최저가">최저가</button>
-                          </div>
-                          </div>
+                          <iframe width="960" height="540" src="<%=@url%>" frameborder="0" allowfullscreen></iframe>
+                          <h3><%=@title%></h3><br><br>
+                          <h2>사용 제품 목록</h2>
+                         <form action="/home/searchnaver" method="GET" target="blank">
+                        제품 1. <input type="hidden" value="<%=@product1%>" name="search_keyword">
+                        <button type="submit" data-label="<%=@product1%>"><%=@product1%></button>
+                        </form><br>
+                        <form action="/home/searchnaver" method="GET" target="blank">
+                        제품 2. <input type="hidden" value="<%=@product2%>" name="search_keyword">
+                        <button type="submit" data-label="<%=@product2%>"><%=@product2%></button>
+                        </form><br>
+                         <form action="/home/searchnaver" method="GET" target="blank">
+                        제품 3. <input type="hidden" value="<%=@product3%>" name="search_keyword">
+                       <button type="submit" data-label="<%=@product3%>"><%=@product3%></button>
+                        </form><br>
+                         <form action="/home/searchnaver" method="GET" target="blank">
+                        제품 4. <input type="hidden" value="<%=@product4%>" name="search_keyword">
+                        <button type="submit" data-label="<%=@product4%>"><%=@product4%></button>
+                        </form></h5><br>
                        </div>
                     </div>
                     
                     <div class="col-md-3">
-                    </div>
-                    
-                    <div class="col-md-4">
-                    <div class="row">
-                    <button data-label="네이버 쇼핑 최저가">네이버 쇼핑 최저가</button>
-                    </div><br><br>
-                    
-                    <% @list.last(1).each do |x|%>
-                    <%=x.cosmetic%>
-                    <%end%>
-                    </div>
+                    </div>                
                  </div>
          </div>
         <br><br><br><br><br><br><br><br><br><br><br><br> 
@@ -117,18 +117,7 @@ button.loading {
     <%= render partial: "down" %>   
 </body>
 
-<script>
-$(".reply_submit").click(function(){
 
-   post_content = $("#content").val();
- 
-    $.ajax({
-    method: "POST",
-    url: "/home/myproduct_api",
-    data: { cosmetic : post_content }
-    })
-    .done(function() {
-    alert("네이버 쇼핑으로 연결합니다.");
-    });
-});
-</script>
+
+
+

@@ -7,6 +7,7 @@ class CreateChallenges < ActiveRecord::Migration
       t.string "writer"
       t.string "introduce"
       t.string :pic, default:""
+      t.integer "ip_address",  default: 0
 
       t.timestamps null: false
     end

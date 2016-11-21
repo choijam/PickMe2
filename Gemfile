@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'xml-simple', '~> 1.1', '>= 1.1.5'
 gem 'carrierwave'
 gem "fog-aws"
 gem 'will_paginate'

@@ -141,7 +141,7 @@
   float: left;
   overflow: hidden;
   margin: 10px 1%;
-  min-width: 200px;
+  min-width: 220px;
   max-width: 250px;
   width: 100%;
   color: #ffffff;
@@ -164,7 +164,7 @@
 
 .snip1344 figcaption {
   width: 100%;
-  padding: 15px 25px;
+  padding: 0px 0px;
   position: absolute;
   left: 0;
   top: 50%;

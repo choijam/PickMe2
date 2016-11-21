@@ -92,7 +92,7 @@ button.loading,
                        <div class="hb-info text-center">
                           <div class="hb-thumb">
                           <iframe width="560" height="315" src="<%=youtube.url%>" frameborder="0" allowfullscreen></iframe>
-                          <h5><%=youtube.title%></h5>
+                          <h5><%=shorttitle(youtube.title)%></h5>
                           <form action="/home/myproduct" method="POST">
                           <input type="hidden" name="myurl" value="<%=youtube.url%>">
                           <input type="hidden" name="mytitle" value="<%=youtube.title%>">

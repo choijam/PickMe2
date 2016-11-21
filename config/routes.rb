@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get 'challenge_update_view/:post_id' => "home#challenge_update_view"
   post '/home/reply_write' => "home#reply_write"
 
+
   #도전뷰크 개인 페이지
   get '/home/challenge_read_developer' => 'home#challenge_read_developer'
   get '/challenge_read_developer/:post_id' => 'home#challenge_read_developer'

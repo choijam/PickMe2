@@ -1,0 +1,34 @@
+<body>
+
+<div class="outer-wrapper">
+   <%= render partial: "head"%>
+
+  <form action="/challenge_update/<%= @one_challenge.id %>" method="post" enctype="multipart/form-data">
+ <div class="inner-content">
+      <div class="container">
+          
+          <div class="form-group">
+            <label for="exampleInputEmail1">포스트 제목</label>    
+            <input name = "title" type="text" class="form-control" id="exampleInputEmail1"  placeholder="제목을 입력해주세요"  value="<%= @one_challenge.title %>">
+        </div> 
+        
+         <div class="fsidebar fsidebar2" id="floating-sidebar">
+            <div class="fs-info">
+               <h3>사용한 제품목록</h3>
+               <div class="clearfix space20"></div>
+               <p><textarea name="content" class="form-control" id="exampleInputPassword1" rows="5" id="comment" placeholder="사용한 제품목록들을 입력해 주십시오"><%= @one_challenge.content %></textarea></p>
+               <div class="clearfix space20"></div>
+            </div>
+         </div>
+         <div id="fs-content" class="fs-content2">   
+             <input type="file" name="pic" accept="video/*" value="<%= @one_challenge.pic %>">
+             <div class="form-group">  
+            <label for="exampleInputPassword1">간단한 소개</label>   
+            <textarea name="introduce" class="form-control" id="exampleInputPassword1" rows="2" id="comment" placeholder="간단한 소개/주제를 적어주세요."><%= @one_challenge.introduce %></textarea>
+        </div>
+            <button a type="submit" class="btn btn-default">수정하기</button>
+      </div>
+</div>
+</form>
+ <%= render partial: "down" %>
+</body>

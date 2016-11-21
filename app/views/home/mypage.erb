@@ -2,6 +2,38 @@
 <div class="outer-wrapper">
     <%= render partial: "head" %>
     <br><br>
+    
+        
+    <div class="container">
+        <h2>구독중인 유투버</h2>
+            <div class="content">
+            <% @selete_youtubecreator.each do |every| %>
+                <% if user_signed_in? && every.subscribes.where(youtuberinfo_id: every.id, user_id: current_user.id).present? %>        
+                    <figure class="snip1344">
+                        <img src="http://www.walls321.com/reimg/image.php?src=http://img.walls321.com/images1/y1k1ytl2kzg.jpg&h=1334&w=750"  alt="profile-sample1" class="background"/>
+                        <img src="<%=every.imagesrc%>" alt="profile-sample1" class="profile"/>
+                      <figcaption>
+             
+                        <h3><%=every.name%></h3>
+                            <form action="/home/youtubelist/<%=every.id%>" method="POST">
+                            <input type="hidden" value="<%=every.name%>" name="youtubename">
+                                <button class="btn btn-default btn-xs" type="submit">영상보러가기</button>
+                            </form>
+                            <form action="/home/subscribe/<%=every.id%>" method="POST">
+                                <button class="btn btn-default btn-xs" type="submit">구독취소</button>
+                                <p>구독자수 <%= every.subscribes.all.count %></p>
+                            </form>
+                      </figcaption>
+                    </figure>
+                <% end %>
+            <% end %>
+           <br><br> 
+
+        <div class="space50"></div>
+        </div>           
+    </div>
+    
+    
     <div class="container">
         <% @every_user.each do |iamyoutuber|%>
             <div class="static">

@@ -118,63 +118,50 @@
             <ul class="filter" data-option-key="filter">
                <li><a class="selected" href="#filter" data-option-value="*">여름</a></li>
                <li><a href="#" data-option-value=".branding">과즙상</a></li>
-               <li><a href="#" data-option-value=".illustration">워터프루프</a></li>
-               <li><a href="#" data-option-value=".web-design">학생</a></li>
-               <li><a href="#" data-option-value=".print">스킨케어</a></li>
+               <li><a href="#" data-option-value=".web-design">데일리</a></li>
+               <li><a href="#" data-option-value=".print">연예인</a></li>
             </ul>
             <div id="portfolio-home" class="isotope home-project-3col">
                <div class="project-item illustration print">
                   <div class="project-gal">
-                      <iframe id="ytplayer" width="480" height="270" src="<%= @every_allcreator.at(1).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <div class="project-info">
-                     <h2>Cras ornare tristique elit</h2>
-                     <p>Photoshop</p>
+                      <iframe id="ytplayer" width="480" height="270" src="<%= @talent_allcreator.at(1).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                      <h5><%=@talent_allcreator.at(1).title%></h5>
+                      <p><%=@talent_allcreator.at(1).name%></p>
                   </div>
                </div>
                <div class="project-item photography web-design">
                   <div class="project-gal">
-                     <iframe id="ytplayer" width="480" height="270" src="<%= @every_allcreator.at(2).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <div class="project-info">
-                     <h2>Praesent placerat risus quis</h2>
-                     <p>UI/UX, Web Design</p>
+                     <iframe id="ytplayer" width="480" height="270" src="<%= @daily_allcreator.at(6).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                     <h5><%=@daily_allcreator.at(6).title%></h5>
+                     <p><%=@daily_allcreator.at(6).name%></p>
                   </div>
                </div>
                <div class="project-item branding">
                   <div class="project-gal">
-                     <iframe id="ytplayer" width="480" height="270" src="<%= @every_allcreator.at(3).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <div class="project-info">
-                     <h2>Ut aliquam sollicitudin</h2>
-                     <p>Web Development</p>
+                     <iframe id="ytplayer" width="480" height="270" src="<%= @fruit_allcreator.at(3).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                     <h5><%=@fruit_allcreator.at(3).title%></h5>
+                     <p><%=@fruit_allcreator.at(3).name%></p>
                   </div>
                </div>
                <div class="project-item illustration web-design print">
                   <div class="project-gal">
-                     <iframe id="ytplayer" width="480" height="270" src="<%= @every_allcreator.at(0).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <div class="project-info">
-                     <h2>Cras ornare tristique</h2>
-                     <p>Creative, Web</p>
+                     <iframe id="ytplayer" width="480" height="270" src="<%= @daily_allcreator.at(4).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                     <h5><%=@daily_allcreator.at(4).title%></h5>
+                     <p><%=@daily_allcreator.at(4).name%></p>
                   </div>
                </div>
                <div class="project-item illustration web-design">
                   <div class="project-gal">
-                     <iframe id="ytplayer" width="480" height="270" src="<%= @every_allcreator.at(1).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <div class="project-info">
-                     <h2>Aliquam tincidunt risus.</h2>
-                     <p>Image Gallery</p>
+                     <iframe id="ytplayer" width="480" height="270" src="<%= @daily_allcreator.at(8).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                     <h5><%=@daily_allcreator.at(8).title%></h5>
+                     <p><%=@daily_allcreator.at(8).name%></p>
                   </div>
                </div>
                <div class="project-item photography branding">
                   <div class="project-gal">
-                     <iframe id="ytplayer" width="480" height="270" src="<%= @every_allcreator.at(2).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <div class="project-info">
-                     <h2>Aliquam erat volutpat</h2>
-                     <p>Image Gallery</p>
+                     <iframe id="ytplayer" width="480" height="270" src="<%= @fruit_allcreator.at(7).url %>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                     <h5><%=@fruit_allcreator.at(7).title%></h5>
+                     <p><%=@fruit_allcreator.at(7).name%></p>
                   </div>
                </div>
             </div>
@@ -186,25 +173,43 @@
          <div class="text-center space40">
             <h2 class="title uppercase" style="font-family: JejuGothic;">Top 뷰티크리에이터</h2>
          </div>
-         <div class="row">
-           <% @every_allcreator.first(3). each.with_index do |youtube, index| %>
-            <div class="col-md-4">
-               <div class="hb-info text-center">
-                  <div class="hb-thumb">
-                  <!--이미지 출려하는 걸로 바꾸기-->
-                  <iframe id="ytplayer3" width="560" height="315" src="<%=youtube.url%>?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+         <div class="hb-info text-center">
+         <div id="portfolio-home" class="isotope home-project-3col">
+               <div class="project-item illustration print">
+                  <div class="project-gal">
+                      <iframe id="ytplayer" width="480" height="270" src="https://www.youtube.com/embed/tRUGnDVnI60?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                      <div class="date-meta">
+                        <!--순위 출력-->
+                        <span><h4>1</h4></span>
+                     </div>
+                      <h4>포니</h4>
+                  </div>
+               </div>
+               <div class="project-item photography web-design">
+                  <div class="project-gal">
+                     <iframe id="ytplayer" width="480" height="270" src="https://www.youtube.com/embed/d1qZVjxmJGc?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
                      <div class="date-meta">
                         <!--순위 출력-->
-                        <span><%=index+1%></span>
+                        <span><h4>2</h4></span>
                      </div>
+                     <h4>씬님</h4>
                   </div>
-                  <h4><a href="#"><%=youtube.name%></a></h4>
                </div>
-            
-            </div>
-            <% end %>
+               <div class="project-item branding">
+                  <div class="project-gal">
+                     <iframe id="ytplayer" width="480" height="270" src="https://www.youtube.com/embed/a-oc3rqT5z0?&html5-1&enablejsapi=1&rel=0&showinfo=0&color=white&fs=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                     <div class="date-meta">
+                        <!--순위 출력-->
+                        <span><h4>3</h4></span>
+                     </div>
+                     <h4>다또아</h4>
+                  </div>
+                  </div>
+               </div>
          </div>
       </div>
+      
+      
       
 
       <div class="space90"></div>
